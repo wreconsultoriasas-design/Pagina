@@ -1,0 +1,1569 @@
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>WRE Consultoría SAS - Recursos Hídricos y Estudios Ambientales</title>
+  <meta name="description" content="Firma líder en consultoría de recursos hídricos, hidrología, modelación hidráulica 2D, hidrogeología y estudios ambientales integrales en Colombia.">
+  <meta property="og:title" content="WRE Consultoría SAS - Recursos Hídricos y Estudios Ambientales">
+  <meta property="og:description" content="Ingeniería del agua para un futuro sostenible. Soluciones de alta precisión técnica en Colombia.">
+  <meta property="og:type" content="website">
+
+  <!-- Google Fonts: Plus Jakarta Sans & JetBrains Mono -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <!-- Tailwind CSS via CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['"Plus Jakarta Sans"', 'system-ui', 'sans-serif'],
+            mono: ['"JetBrains Mono"', 'monospace'],
+          },
+          colors: {
+            slate: {
+              750: '#253248',
+              850: '#141e2e',
+            }
+          }
+        }
+      }
+    };
+  </script>
+
+  <!-- Lucide Icons via CDN -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+
+  <style>
+    /* Custom scrollbar */
+    ::-webkit-scrollbar { width: 8px; }
+    ::-webkit-scrollbar-track { background: #0b1120; }
+    ::-webkit-scrollbar-thumb { background: #334155; border-radius: 4px; }
+    ::-webkit-scrollbar-thumb:hover { background: #475569; }
+    .no-scrollbar::-webkit-scrollbar { display: none; }
+    .no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+  </style>
+</head>
+
+<body class="bg-slate-950 text-slate-100 font-sans antialiased selection:bg-sky-500 selection:text-white min-h-screen flex flex-col">
+
+  <!-- ==================== HEADER & TOP BAR ==================== -->
+  <header id="main-header" class="fixed top-0 left-0 right-0 z-40 bg-slate-950/90 backdrop-blur-md border-b border-slate-800 transition-all duration-300 py-3.5">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between gap-8">
+        
+        <!-- Zone 1: Brand Wordmark -->
+        <a href="#inicio" class="flex items-center gap-2.5 text-white hover:text-sky-400 transition-colors shrink-0 group">
+          <div class="w-9 h-9 rounded-lg bg-sky-600/20 border border-sky-500/40 flex items-center justify-center text-sky-400 group-hover:scale-105 transition-all">
+            <i data-lucide="waves" class="w-5 h-5 text-sky-400"></i>
+          </div>
+          <div class="flex flex-col">
+            <span class="text-lg font-bold tracking-tight text-white leading-tight">WRE Consultoría SAS</span>
+            <span class="text-[10px] text-sky-400/90 font-medium tracking-wider uppercase leading-none hidden sm:block">Recursos Hídricos & Ambiente</span>
+          </div>
+        </a>
+
+        <!-- Zone 2: Navigation Links -->
+        <nav class="hidden lg:flex items-center gap-7 text-sm font-medium text-slate-300">
+          <a href="#inicio" class="hover:text-white transition-colors whitespace-nowrap">Inicio</a>
+          <a href="#quienes-somos" class="hover:text-white transition-colors whitespace-nowrap">Quienes Somos</a>
+          <a href="#servicios" class="hover:text-white transition-colors whitespace-nowrap">Servicios</a>
+          <a href="#cotizador" class="hover:text-white transition-colors whitespace-nowrap">Cotizador</a>
+          <a href="#recursos" class="hover:text-white transition-colors whitespace-nowrap">Recursos Técnicos</a>
+          <a href="#contacto" class="hover:text-white transition-colors whitespace-nowrap">Contacto</a>
+        </nav>
+
+        <!-- Zone 3: Primary Action & WhatsApp -->
+        <div class="hidden sm:flex items-center gap-3 shrink-0">
+          <a href="https://wa.me/573164387493" target="_blank" rel="noopener noreferrer" class="p-2 text-slate-300 hover:text-emerald-400 hover:bg-slate-900 rounded-lg transition-colors" title="Chat directo en WhatsApp">
+            <i data-lucide="message-circle" class="w-5 h-5 text-emerald-400"></i>
+          </a>
+          <a href="#cotizador" class="inline-flex items-center gap-2 px-4 py-2 text-xs font-semibold text-white bg-sky-600 hover:bg-sky-500 rounded-lg shadow-sm transition-all whitespace-nowrap">
+            <span>Cotizar Proyecto</span>
+            <i data-lucide="arrow-right" class="w-3.5 h-3.5"></i>
+          </a>
+        </div>
+
+        <!-- Mobile Hamburger Button -->
+        <div class="flex items-center gap-2 lg:hidden">
+          <a href="https://wa.me/573164387493" target="_blank" rel="noopener noreferrer" class="p-2 text-emerald-400 bg-slate-900 border border-slate-800 rounded-lg min-w-[44px] min-h-[44px] flex items-center justify-center">
+            <i data-lucide="message-circle" class="w-5 h-5"></i>
+          </a>
+          <button id="mobile-menu-btn" class="p-2 text-slate-300 hover:text-white bg-slate-900 border border-slate-800 rounded-lg min-w-[44px] min-h-[44px] flex items-center justify-center">
+            <i data-lucide="menu" id="menu-icon-open" class="w-6 h-6"></i>
+            <i data-lucide="x" id="menu-icon-close" class="w-6 h-6 hidden"></i>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Mobile Slide-Down Menu -->
+    <div id="mobile-menu" class="hidden lg:hidden bg-slate-950 border-b border-slate-800 px-4 pt-3 pb-6">
+      <div class="flex flex-col space-y-1">
+        <a href="#inicio" class="mobile-nav-link px-3 py-3 rounded-md text-base font-medium text-slate-200 hover:bg-slate-900">Inicio</a>
+        <a href="#quienes-somos" class="mobile-nav-link px-3 py-3 rounded-md text-base font-medium text-slate-200 hover:bg-slate-900">Quienes Somos</a>
+        <a href="#servicios" class="mobile-nav-link px-3 py-3 rounded-md text-base font-medium text-slate-200 hover:bg-slate-900">Servicios</a>
+        <a href="#cotizador" class="mobile-nav-link px-3 py-3 rounded-md text-base font-medium text-slate-200 hover:bg-slate-900">Cotizador & Diagnóstico</a>
+        <a href="#recursos" class="mobile-nav-link px-3 py-3 rounded-md text-base font-medium text-slate-200 hover:bg-slate-900">Recursos Técnicos</a>
+        <a href="#contacto" class="mobile-nav-link px-3 py-3 rounded-md text-base font-medium text-slate-200 hover:bg-slate-900">Contacto</a>
+
+        <div class="pt-3 border-t border-slate-800 mt-2 space-y-2">
+          <a href="#cotizador" class="mobile-nav-link w-full inline-flex items-center justify-center gap-2 px-4 py-3 text-sm font-semibold text-white bg-sky-600 rounded-lg min-h-[44px]">
+            <span>Cotizar Proyecto</span>
+            <i data-lucide="arrow-right" class="w-4 h-4"></i>
+          </a>
+          <a href="tel:573164387493" class="w-full inline-flex items-center justify-center gap-2 px-4 py-3 text-sm font-medium text-slate-300 bg-slate-900 border border-slate-800 rounded-lg min-h-[44px]">
+            <span>Llamar al +57 316 438 7493</span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main class="flex-1">
+
+    <!-- ==================== HERO SECTION ==================== -->
+    <section id="inicio" class="relative pt-28 sm:pt-36 pb-16 lg:pb-24 bg-slate-950 overflow-hidden">
+      <!-- Background Image with Scrim -->
+      <div class="absolute inset-0 z-0">
+        <img
+          src="https://files.cdn-files-a.com/uploads/10295476/2000_67a1783e58172.jpg"
+          alt="Ingeniería de recursos hídricos WRE Consultoría"
+          class="w-full h-full object-cover object-center opacity-30"
+          onerror="this.style.display='none'"
+        />
+        <div class="absolute inset-0 bg-gradient-to-b from-slate-950/90 via-slate-950/80 to-slate-950"></div>
+        <div class="absolute inset-0 bg-[radial-gradient(circle_at_30%_30%,rgba(14,165,233,0.15),transparent_60%)]"></div>
+      </div>
+
+      <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="max-w-3xl pt-6 sm:pt-10">
+          <!-- Unboxed metadata kicker -->
+          <div class="flex items-center gap-2 text-xs sm:text-sm font-semibold tracking-wider text-sky-400 mb-4 uppercase">
+            <span>Consultoría Especializada</span>
+            <span aria-hidden="true" class="text-slate-600">·</span>
+            <span>Recursos Hídricos</span>
+            <span aria-hidden="true" class="text-slate-600">·</span>
+            <span>Estudios Ambientales</span>
+          </div>
+
+          <h1 class="text-3xl sm:text-5xl lg:text-6xl font-extrabold text-white tracking-tight leading-[1.1] mb-6 [text-wrap:balance]">
+            Ingeniería del agua para un futuro sostenible
+          </h1>
+
+          <p class="text-base sm:text-lg lg:text-xl text-slate-300 leading-relaxed mb-8 max-w-2xl font-normal">
+            Modelación hidrodinámica 2D, estudios hidrológicos, hidrogeología de acuíferos y licenciamiento ambiental riguroso para infraestructura, agroindustria y entidades públicas en Colombia.
+          </p>
+
+          <!-- CTAs -->
+          <div class="flex flex-col sm:flex-row items-stretch sm:items-center gap-3 sm:gap-4 mb-12">
+            <a href="#cotizador" class="inline-flex items-center justify-center gap-2.5 px-6 py-3.5 text-sm font-semibold text-white bg-sky-600 hover:bg-sky-500 rounded-lg shadow-lg shadow-sky-950/50 transition-all hover:-translate-y-0.5 min-h-[48px]">
+              <span>Diagnóstico & Cotización Técnica</span>
+              <i data-lucide="arrow-right" class="w-4 h-4"></i>
+            </a>
+            <a href="#servicios" class="inline-flex items-center justify-center gap-2 px-6 py-3.5 text-sm font-medium text-slate-200 hover:text-white bg-slate-900/80 hover:bg-slate-800 border border-slate-700/80 rounded-lg transition-all min-h-[48px]">
+              <span>Explorar Servicios</span>
+              <i data-lucide="chevron-down" class="w-4 h-4"></i>
+            </a>
+          </div>
+
+          <!-- Trust Signals -->
+          <div class="flex flex-wrap items-center gap-y-2 gap-x-6 text-xs text-slate-400 pt-4 border-t border-slate-800/80">
+            <div class="flex items-center gap-1.5">
+              <i data-lucide="check-circle-2" class="w-4 h-4 text-sky-400"></i>
+              <span>Modelación Numérica Iber 2D & HEC-RAS</span>
+            </div>
+            <div class="flex items-center gap-1.5">
+              <i data-lucide="check-circle-2" class="w-4 h-4 text-sky-400"></i>
+              <span>Apegado al Decreto 1076/2015 & Guías ANLA</span>
+            </div>
+            <div class="flex items-center gap-1.5">
+              <i data-lucide="check-circle-2" class="w-4 h-4 text-sky-400"></i>
+              <span>Sede en Bogotá con cobertura en toda Colombia</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- 4-Column Proof Row Strip -->
+        <div class="mt-14 pt-8 border-t border-slate-800/80 grid grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6">
+          <div class="p-5 rounded-xl bg-slate-900/60 border border-slate-800">
+            <div class="flex items-center gap-2 text-sky-400 mb-2">
+              <i data-lucide="layers" class="w-5 h-5"></i>
+              <span class="text-2xl sm:text-3xl font-extrabold text-white font-mono tabular-nums">+10 Años</span>
+            </div>
+            <p class="text-xs sm:text-sm text-slate-300 font-medium">Experiencia Multidisciplinaria</p>
+            <p class="text-xs text-slate-400 mt-1">Ingeniería hidráulica, hidrológica y ambiental aplicada.</p>
+          </div>
+
+          <div class="p-5 rounded-xl bg-slate-900/60 border border-slate-800">
+            <div class="flex items-center gap-2 text-sky-400 mb-2">
+              <i data-lucide="shield-check" class="w-5 h-5"></i>
+              <span class="text-2xl sm:text-3xl font-extrabold text-white font-mono tabular-nums">100%</span>
+            </div>
+            <p class="text-xs sm:text-sm text-slate-300 font-medium">Rigor Técnico y Legal</p>
+            <p class="text-xs text-slate-400 mt-1">Conforme a términos de referencia CARs y ANLA.</p>
+          </div>
+
+          <div class="p-5 rounded-xl bg-slate-900/60 border border-slate-800">
+            <div class="flex items-center gap-2 text-sky-400 mb-2">
+              <i data-lucide="cpu" class="w-5 h-5"></i>
+              <span class="text-2xl sm:text-3xl font-extrabold text-white font-mono tabular-nums">1D / 2D</span>
+            </div>
+            <p class="text-xs sm:text-sm text-slate-300 font-medium">Modelación Computacional</p>
+            <p class="text-xs text-slate-400 mt-1">Iber, HEC-HMS, HEC-RAS, MODFLOW y QUAL2K.</p>
+          </div>
+
+          <div class="p-5 rounded-xl bg-slate-900/60 border border-slate-800">
+            <div class="flex items-center gap-2 text-sky-400 mb-2">
+              <i data-lucide="map-pin" class="w-5 h-5"></i>
+              <span class="text-2xl sm:text-3xl font-extrabold text-white font-mono tabular-nums">Nacional</span>
+            </div>
+            <p class="text-xs sm:text-sm text-slate-300 font-medium">Cobertura en Colombia</p>
+            <p class="text-xs text-slate-400 mt-1">Atención directa a proyectos en todos los departamentos.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== QUIENES SOMOS ==================== -->
+    <section id="quienes-somos" class="py-20 bg-slate-900 border-t border-slate-800 text-slate-100">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <div class="max-w-3xl mb-14">
+          <div class="flex items-center gap-2 text-xs font-semibold uppercase tracking-wider text-sky-400 mb-2">
+            <span>Identidad Corporativa</span>
+            <span aria-hidden="true" className="text-slate-600">/</span>
+            <span>Excelencia Técnica</span>
+          </div>
+          <h2 class="text-2xl sm:text-4xl font-extrabold text-white tracking-tight [text-wrap:balance]">
+            Quienes Somos
+          </h2>
+          <p class="mt-4 text-base sm:text-lg text-slate-300 leading-relaxed font-normal">
+            <strong class="text-white font-semibold">WRE Consultoría S.A.S.</strong> es una empresa líder especializada en consultoría de recursos hídricos y estudios ambientales, integrada por un equipo multidisciplinario de expertos comprometidos con la excelencia técnica y la sostenibilidad.
+          </p>
+          <p class="mt-3 text-sm sm:text-base text-slate-300 leading-relaxed font-normal">
+            Nuestra experiencia abarca desde la hidrología, la hidráulica y la gestión de aguas subterráneas, hasta la evaluación de la calidad del agua y el desarrollo de estudios ambientales integrales. Nos especializamos en el diseño de soluciones personalizadas para proyectos de riego y drenaje agrícola, garantizando siempre un equilibrio entre la eficiencia productiva y la preservación del entorno. Basamos nuestra gestión en pilares de integridad y profesionalismo, transformando los desafíos del recurso hídrico en oportunidades sostenibles para nuestros clientes.
+          </p>
+        </div>
+
+        <!-- Misión y Visión Grid -->
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6 lg:gap-8 mb-16">
+          <!-- Misión -->
+          <div class="p-7 sm:p-8 rounded-2xl bg-slate-950/70 border border-slate-800 hover:border-sky-500/40 transition-colors">
+            <div class="w-12 h-12 rounded-xl bg-sky-500/10 border border-sky-500/30 flex items-center justify-center text-sky-400 mb-5">
+              <i data-lucide="target" class="w-6 h-6"></i>
+            </div>
+            <h3 class="text-xl font-bold text-white mb-3">Misión</h3>
+            <p class="text-slate-300 text-sm sm:text-base leading-relaxed">
+              Proveer soluciones integrales en consultoría de recursos hídricos y estudios ambientales a través de una ingeniería de excelencia y un equipo multidisciplinario altamente calificado. Nos enfocamos en satisfacer las necesidades específicas de nuestros clientes mediante la innovación y el rigor técnico, promoviendo siempre el desarrollo sostenible y la preservación de los ecosistemas para garantizar la disponibilidad y calidad del agua para las futuras generaciones.
+            </p>
+            <div class="mt-6 pt-4 border-t border-slate-850 flex items-center gap-2 text-xs font-medium text-sky-400">
+              <i data-lucide="check-circle" class="w-4 h-4"></i>
+              <span>Ingeniería orientada a resultados técnicos comprobables</span>
+            </div>
+          </div>
+
+          <!-- Visión -->
+          <div class="p-7 sm:p-8 rounded-2xl bg-slate-950/70 border border-slate-800 hover:border-emerald-500/40 transition-colors">
+            <div class="w-12 h-12 rounded-xl bg-emerald-500/10 border border-emerald-500/30 flex items-center justify-center text-emerald-400 mb-5">
+              <i data-lucide="compass" class="w-6 h-6"></i>
+            </div>
+            <h3 class="text-xl font-bold text-white mb-3">Visión 2030</h3>
+            <p class="text-slate-300 text-sm sm:text-base leading-relaxed">
+              Para el año 2030, consolidarnos como la consultora referente a nivel regional en la gestión estratégica del agua y el medio ambiente, siendo reconocidos por nuestra integridad y capacidad técnica. Aspiramos a ser aliados clave en la transformación hacia modelos productivos y de infraestructura que integren el desarrollo sostenible como eje central, liderando proyectos que armonicen el progreso económico con el equilibrio ambiental.
+            </p>
+            <div class="mt-6 pt-4 border-t border-slate-850 flex items-center gap-2 text-xs font-medium text-emerald-400">
+              <i data-lucide="check-circle" class="w-4 h-4"></i>
+              <span>Liderazgo en gestión hídrica y ambiental en Colombia</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- 4 Pilares -->
+        <div>
+          <div class="text-center max-w-2xl mx-auto mb-10">
+            <h3 class="text-lg sm:text-xl font-bold text-white">Nuestros Pilares de Actuación Profesional</h3>
+            <p class="text-xs sm:text-sm text-slate-400 mt-1">Garantía metodológica en cada memoria de cálculo y estudio ambiental.</p>
+          </div>
+
+          <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
+            <div class="p-5 rounded-xl bg-slate-950/50 border border-slate-800/80">
+              <div class="w-9 h-9 rounded-lg bg-slate-800 flex items-center justify-center text-sky-400 mb-4">
+                <i data-lucide="award" class="w-5 h-5"></i>
+              </div>
+              <h4 class="text-sm font-semibold text-white mb-2">Excelencia Técnica & Rigor</h4>
+              <p class="text-xs text-slate-400 leading-relaxed">Modelos matemáticos validados internacionalmente (Iber, HEC-RAS, MODFLOW, QUAL2K).</p>
+            </div>
+
+            <div class="p-5 rounded-xl bg-slate-950/50 border border-slate-800/80">
+              <div class="w-9 h-9 rounded-lg bg-slate-800 flex items-center justify-center text-emerald-400 mb-4">
+                <i data-lucide="leaf" class="w-5 h-5"></i>
+              </div>
+              <h4 class="text-sm font-semibold text-white mb-2">Sostenibilidad Ecológica</h4>
+              <p class="text-xs text-slate-400 leading-relaxed">Conciliamos la viabilidad productiva e infraestructural con la preservación de cuencas.</p>
+            </div>
+
+            <div class="p-5 rounded-xl bg-slate-950/50 border border-slate-800/80">
+              <div class="w-9 h-9 rounded-lg bg-slate-800 flex items-center justify-center text-sky-400 mb-4">
+                <i data-lucide="shield-check" class="w-5 h-5"></i>
+              </div>
+              <h4 class="text-sm font-semibold text-white mb-2">Cumplimiento Legal</h4>
+              <p class="text-xs text-slate-400 leading-relaxed">Total apego al Decreto 1076/2015, guías de la ANLA y términos de referencia de las CARs.</p>
+            </div>
+
+            <div class="p-5 rounded-xl bg-slate-950/50 border border-slate-800/80">
+              <div class="w-9 h-9 rounded-lg bg-slate-800 flex items-center justify-center text-emerald-400 mb-4">
+                <i data-lucide="users" class="w-5 h-5"></i>
+              </div>
+              <h4 class="text-sm font-semibold text-white mb-2">Equipo Multidisciplinario</h4>
+              <p class="text-xs text-slate-400 leading-relaxed">Ingenieros civiles, hidrólogos, hidrogeólogos, biólogos y analistas de sistemas SIG.</p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ==================== SERVICIOS ==================== -->
+    <section id="servicios" class="py-20 bg-slate-950 text-slate-100">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <div class="max-w-3xl mb-12">
+          <div class="flex items-center gap-2 text-xs font-semibold uppercase tracking-wider text-sky-400 mb-2">
+            <span>Servicios de Consultoría</span>
+            <span aria-hidden="true" className="text-slate-600">/</span>
+            <span>Portafolio Técnico Integral</span>
+          </div>
+          <h2 class="text-2xl sm:text-4xl font-extrabold text-white tracking-tight [text-wrap:balance]">
+            Soluciones Especializadas en Recursos Hídricos y Medio Ambiente
+          </h2>
+          <p class="mt-3 text-sm sm:text-base text-slate-300 leading-relaxed font-normal">
+            Ingeniería de alta fidelidad técnica sustentada en normativas vigentes, modelación computacional avanzada y entregables listos para radicar ante autoridades ambientales y entidades contratantes.
+          </p>
+        </div>
+
+        <!-- Filter Tabs -->
+        <div class="flex items-center gap-2 overflow-x-auto pb-4 mb-10 no-scrollbar" id="service-filters">
+          <button data-cat="all" class="cat-btn px-4 py-2 text-xs sm:text-sm font-semibold rounded-lg bg-sky-600 text-white shadow-sm whitespace-nowrap min-h-[40px]">Todos los Servicios</button>
+          <button data-cat="hidrologia" class="cat-btn px-4 py-2 text-xs sm:text-sm font-medium rounded-lg bg-slate-900 text-slate-300 hover:text-white border border-slate-800 whitespace-nowrap min-h-[40px]">Hidrología</button>
+          <button data-cat="hidraulica" class="cat-btn px-4 py-2 text-xs sm:text-sm font-medium rounded-lg bg-slate-900 text-slate-300 hover:text-white border border-slate-800 whitespace-nowrap min-h-[40px]">Hidráulica</button>
+          <button data-cat="subterraneas" class="cat-btn px-4 py-2 text-xs sm:text-sm font-medium rounded-lg bg-slate-900 text-slate-300 hover:text-white border border-slate-800 whitespace-nowrap min-h-[40px]">Aguas Subterráneas</button>
+          <button data-cat="calidad" class="cat-btn px-4 py-2 text-xs sm:text-sm font-medium rounded-lg bg-slate-900 text-slate-300 hover:text-white border border-slate-800 whitespace-nowrap min-h-[40px]">Calidad del Agua</button>
+          <button data-cat="riego" class="cat-btn px-4 py-2 text-xs sm:text-sm font-medium rounded-lg bg-slate-900 text-slate-300 hover:text-white border border-slate-800 whitespace-nowrap min-h-[40px]">Riego y Drenaje</button>
+          <button data-cat="ambiental" class="cat-btn px-4 py-2 text-xs sm:text-sm font-medium rounded-lg bg-slate-900 text-slate-300 hover:text-white border border-slate-800 whitespace-nowrap min-h-[40px]">Estudios Ambientales</button>
+        </div>
+
+        <!-- Services Cards Grid -->
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-20" id="services-grid">
+          
+          <!-- Card 1: Hidrología -->
+          <div class="service-card flex flex-col bg-slate-900/90 border border-slate-800 rounded-2xl overflow-hidden hover:border-slate-700 transition-all group" data-category="hidrologia">
+            <div class="relative aspect-[16/10] overflow-hidden bg-slate-850">
+              <img src="https://files.cdn-files-a.com/uploads/10295476/800_67a1742a27268.png" alt="Estudios de Hidrología" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+              <div class="absolute inset-0 bg-gradient-to-t from-slate-900 via-transparent to-transparent opacity-80"></div>
+              <div class="absolute top-3 left-3 px-2.5 py-1 text-[11px] font-semibold text-sky-300 bg-slate-950/80 rounded border border-slate-700/60">Hidrología Superficial</div>
+            </div>
+            <div class="p-6 flex-1 flex flex-col">
+              <h3 class="text-lg font-bold text-white group-hover:text-sky-300 transition-colors mb-1.5">Estudios de Hidrología</h3>
+              <p class="text-xs font-medium text-slate-400 mb-3">Ciclo del agua, regímenes de caudales y prevención de inundaciones</p>
+              <p class="text-xs sm:text-sm text-slate-300 leading-relaxed mb-5 flex-1 font-normal">
+                Se enfocan en el ciclo del agua, su distribución y movimiento en la superficie terrestre, evaluando precipitaciones, escorrentías, evaporación e infiltración. Esenciales para la planificación hídrica y gestión de cuencas.
+              </p>
+              <div class="pt-3 border-t border-slate-800 flex items-center justify-between gap-2 mt-auto">
+                <button onclick="openServiceModal('hidrologia')" class="text-xs font-semibold text-sky-400 hover:text-sky-300 inline-flex items-center gap-1.5 py-1.5">
+                  <span>Ver Ficha Técnica</span>
+                  <i data-lucide="chevron-right" class="w-3.5 h-3.5"></i>
+                </button>
+                <button onclick="prefillQuote('Estudios de Hidrología')" class="px-3 py-1.5 text-xs font-medium text-white bg-slate-800 hover:bg-sky-600 rounded-md transition-colors">Cotizar</button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 2: Hidráulica -->
+          <div class="service-card flex flex-col bg-slate-900/90 border border-slate-800 rounded-2xl overflow-hidden hover:border-slate-700 transition-all group" data-category="hidraulica">
+            <div class="relative aspect-[16/10] overflow-hidden bg-slate-850">
+              <img src="https://files.cdn-files-a.com/uploads/10295476/800_67a174c391a0f.jpg" alt="Estudios de Hidráulica" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+              <div class="absolute inset-0 bg-gradient-to-t from-slate-900 via-transparent to-transparent opacity-80"></div>
+              <div class="absolute top-3 left-3 px-2.5 py-1 text-[11px] font-semibold text-sky-300 bg-slate-950/80 rounded border border-slate-700/60">Hidrodinámica & Obras</div>
+            </div>
+            <div class="p-6 flex-1 flex flex-col">
+              <h3 class="text-lg font-bold text-white group-hover:text-sky-300 transition-colors mb-1.5">Estudios de Hidráulica</h3>
+              <p class="text-xs font-medium text-slate-400 mb-3">Modelación 1D/2D con Iber y diseño de sistemas de conducción</p>
+              <p class="text-xs sm:text-sm text-slate-300 leading-relaxed mb-5 flex-1 font-normal">
+                Analizan el comportamiento y control del agua en movimiento, incluyendo el diseño de sistemas de conducción como canales, tuberías y presas. Cruciales para la infraestructura hidráulica y delimitación de rondas.
+              </p>
+              <div class="pt-3 border-t border-slate-800 flex items-center justify-between gap-2 mt-auto">
+                <button onclick="openServiceModal('hidraulica')" class="text-xs font-semibold text-sky-400 hover:text-sky-300 inline-flex items-center gap-1.5 py-1.5">
+                  <span>Ver Ficha Técnica</span>
+                  <i data-lucide="chevron-right" class="w-3.5 h-3.5"></i>
+                </button>
+                <button onclick="prefillQuote('Estudios de Hidráulica')" class="px-3 py-1.5 text-xs font-medium text-white bg-slate-800 hover:bg-sky-600 rounded-md transition-colors">Cotizar</button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 3: Aguas Subterráneas -->
+          <div class="service-card flex flex-col bg-slate-900/90 border border-slate-800 rounded-2xl overflow-hidden hover:border-slate-700 transition-all group" data-category="subterraneas">
+            <div class="relative aspect-[16/10] overflow-hidden bg-slate-850">
+              <img src="https://files.cdn-files-a.com/uploads/10295476/800_696ad1abc627d.png" alt="Estudios de Aguas Subterráneas" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+              <div class="absolute inset-0 bg-gradient-to-t from-slate-900 via-transparent to-transparent opacity-80"></div>
+              <div class="absolute top-3 left-3 px-2.5 py-1 text-[11px] font-semibold text-sky-300 bg-slate-950/80 rounded border border-slate-700/60">Hidrogeología</div>
+            </div>
+            <div class="p-6 flex-1 flex flex-col">
+              <h3 class="text-lg font-bold text-white group-hover:text-sky-300 transition-colors mb-1.5">Estudios de Aguas Subterráneas</h3>
+              <p class="text-xs font-medium text-slate-400 mb-3">Ensayos de bombeo, acuíferos y concesiones de aguas subterráneas</p>
+              <p class="text-xs sm:text-sm text-slate-300 leading-relaxed mb-5 flex-1 font-normal">
+                Investigan la distribución, movimiento y calidad del agua subterránea, evaluando acuíferos y la sostenibilidad de recursos hídricos subterráneos. Vitales para el abastecimiento y la agricultura.
+              </p>
+              <div class="pt-3 border-t border-slate-800 flex items-center justify-between gap-2 mt-auto">
+                <button onclick="openServiceModal('subterraneas')" class="text-xs font-semibold text-sky-400 hover:text-sky-300 inline-flex items-center gap-1.5 py-1.5">
+                  <span>Ver Ficha Técnica</span>
+                  <i data-lucide="chevron-right" class="w-3.5 h-3.5"></i>
+                </button>
+                <button onclick="prefillQuote('Estudios de Aguas Subterráneas')" class="px-3 py-1.5 text-xs font-medium text-white bg-slate-800 hover:bg-sky-600 rounded-md transition-colors">Cotizar</button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 4: Calidad del Agua -->
+          <div class="service-card flex flex-col bg-slate-900/90 border border-slate-800 rounded-2xl overflow-hidden hover:border-slate-700 transition-all group" data-category="calidad">
+            <div class="relative aspect-[16/10] overflow-hidden bg-slate-850">
+              <img src="https://files.cdn-files-a.com/uploads/10295476/800_696ad381ba7fa.jpg" alt="Estudios de Calidad del Agua" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+              <div class="absolute inset-0 bg-gradient-to-t from-slate-900 via-transparent to-transparent opacity-80"></div>
+              <div class="absolute top-3 left-3 px-2.5 py-1 text-[11px] font-semibold text-sky-300 bg-slate-950/80 rounded border border-slate-700/60">Calidad & Vertimientos</div>
+            </div>
+            <div class="p-6 flex-1 flex flex-col">
+              <h3 class="text-lg font-bold text-white group-hover:text-sky-300 transition-colors mb-1.5">Estudios de Calidad del Agua</h3>
+              <p class="text-xs font-medium text-slate-400 mb-3">Modelación QUAL2K, capacidad de asimilación y permisos Res. 0631</p>
+              <p class="text-xs sm:text-sm text-slate-300 leading-relaxed mb-5 flex-1 font-normal">
+                Evalúan las características físicas, químicas y biológicas del agua para determinar su aptitud de uso, analizando contaminantes y monitoreando parámetros de calidad ante autoridades ambientales.
+              </p>
+              <div class="pt-3 border-t border-slate-800 flex items-center justify-between gap-2 mt-auto">
+                <button onclick="openServiceModal('calidad')" class="text-xs font-semibold text-sky-400 hover:text-sky-300 inline-flex items-center gap-1.5 py-1.5">
+                  <span>Ver Ficha Técnica</span>
+                  <i data-lucide="chevron-right" class="w-3.5 h-3.5"></i>
+                </button>
+                <button onclick="prefillQuote('Estudios de Calidad del Agua')" class="px-3 py-1.5 text-xs font-medium text-white bg-slate-800 hover:bg-sky-600 rounded-md transition-colors">Cotizar</button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 5: Riego y Drenaje Agrícola -->
+          <div class="service-card flex flex-col bg-slate-900/90 border border-slate-800 rounded-2xl overflow-hidden hover:border-slate-700 transition-all group" data-category="riego">
+            <div class="relative aspect-[16/10] overflow-hidden bg-slate-850">
+              <img src="https://files.cdn-files-a.com/uploads/10295476/800_696ad76bc10fe.png" alt="Estudios de Riego y Drenaje" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+              <div class="absolute inset-0 bg-gradient-to-t from-slate-900 via-transparent to-transparent opacity-80"></div>
+              <div class="absolute top-3 left-3 px-2.5 py-1 text-[11px] font-semibold text-sky-300 bg-slate-950/80 rounded border border-slate-700/60">Agroingeniería</div>
+            </div>
+            <div class="p-6 flex-1 flex flex-col">
+              <h3 class="text-lg font-bold text-white group-hover:text-sky-300 transition-colors mb-1.5">Estudios de Riego y Drenaje Agrícola</h3>
+              <p class="text-xs font-medium text-slate-400 mb-3">Optimización hídrica, diseño de canales y control de salinización</p>
+              <p class="text-xs sm:text-sm text-slate-300 leading-relaxed mb-5 flex-1 font-normal">
+                Optimización del uso del agua en la agricultura, diseñando y analizando sistemas de riego y planificación de drenaje para prevenir problemas de salinidad y garantizar producción sostenible.
+              </p>
+              <div class="pt-3 border-t border-slate-800 flex items-center justify-between gap-2 mt-auto">
+                <button onclick="openServiceModal('riego')" class="text-xs font-semibold text-sky-400 hover:text-sky-300 inline-flex items-center gap-1.5 py-1.5">
+                  <span>Ver Ficha Técnica</span>
+                  <i data-lucide="chevron-right" class="w-3.5 h-3.5"></i>
+                </button>
+                <button onclick="prefillQuote('Estudios de Riego y Drenaje Agrícola')" class="px-3 py-1.5 text-xs font-medium text-white bg-slate-800 hover:bg-sky-600 rounded-md transition-colors">Cotizar</button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 6: Estudios Ambientales -->
+          <div class="service-card flex flex-col bg-slate-900/90 border border-slate-800 rounded-2xl overflow-hidden hover:border-slate-700 transition-all group" data-category="ambiental">
+            <div class="relative aspect-[16/10] overflow-hidden bg-slate-850">
+              <img src="https://files.cdn-files-a.com/uploads/10295476/800_696ad81116d35.jpg" alt="Estudios Ambientales" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+              <div class="absolute inset-0 bg-gradient-to-t from-slate-900 via-transparent to-transparent opacity-80"></div>
+              <div class="absolute top-3 left-3 px-2.5 py-1 text-[11px] font-semibold text-sky-300 bg-slate-950/80 rounded border border-slate-700/60">Gestión Ambiental</div>
+            </div>
+            <div class="p-6 flex-1 flex flex-col">
+              <h3 class="text-lg font-bold text-white group-hover:text-sky-300 transition-colors mb-1.5">Estudios Ambientales e Instrumentos</h3>
+              <p class="text-xs font-medium text-slate-400 mb-3">EIA, PMA, POMCA, PUEAA, PSMV y licenciamiento ante ANLA y CARs</p>
+              <p class="text-xs sm:text-sm text-slate-300 leading-relaxed mb-5 flex-1 font-normal">
+                Elaboración técnica de expedientes ambientales para licenciamiento, permisos y planificación territorial según el Decreto 1076/2015: EIA, PMA, PORH, DAA, POMCA, PUEAA, PMAA, PSMV, PIGCCS, PGIRS, PDA, AVR e ICA.
+              </p>
+              <div class="pt-3 border-t border-slate-800 flex items-center justify-between gap-2 mt-auto">
+                <button onclick="openServiceModal('ambiental')" class="text-xs font-semibold text-sky-400 hover:text-sky-300 inline-flex items-center gap-1.5 py-1.5">
+                  <span>Ver Ficha Técnica</span>
+                  <i data-lucide="chevron-right" class="w-3.5 h-3.5"></i>
+                </button>
+                <button onclick="prefillQuote('Estudios Ambientales e Instrumentos')" class="px-3 py-1.5 text-xs font-medium text-white bg-slate-800 hover:bg-sky-600 rounded-md transition-colors">Cotizar</button>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Glosario Interactivo de Instrumentos Ambientales -->
+        <div class="bg-slate-900 border border-slate-800 rounded-2xl p-6 sm:p-8">
+          <div class="mb-6 pb-6 border-b border-slate-800">
+            <div class="flex items-center gap-2 text-xs font-semibold uppercase tracking-wider text-emerald-400 mb-1">
+              <i data-lucide="book-open" class="w-4 h-4"></i>
+              <span>Glosario Técnico de Gestión Ambiental en Colombia</span>
+            </div>
+            <h3 class="text-xl sm:text-2xl font-bold text-white">Instrumentos y Planes Ambientales que Tramitamos</h3>
+            <p class="text-xs sm:text-sm text-slate-400 mt-1 max-w-2xl">
+              Haga clic en cualquiera de las siglas para conocer el alcance técnico, la autoridad evaluadora (ANLA / CARs) y el objetivo legal exigido en Colombia.
+            </p>
+          </div>
+
+          <!-- Acronym Buttons -->
+          <div class="flex flex-wrap gap-2 sm:gap-2.5 mb-6" id="instrument-buttons"></div>
+
+          <!-- Dynamic Details Container -->
+          <div id="instrument-detail-box" class="p-5 sm:p-6 rounded-xl bg-slate-950/80 border border-emerald-500/30">
+            <p class="text-xs text-slate-400">Seleccione una sigla arriba para ver los detalles del instrumento ambiental.</p>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ==================== COTIZADOR & DIAGNÓSTICO ==================== -->
+    <section id="cotizador" class="py-20 bg-slate-950 text-slate-100 border-t border-slate-800">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <div class="max-w-3xl mb-12">
+          <div class="flex items-center gap-2 text-xs font-semibold uppercase tracking-wider text-sky-400 mb-2">
+            <i data-lucide="calculator" class="w-4 h-4"></i>
+            <span>Herramienta Interactiva</span>
+            <span aria-hidden="true" className="text-slate-600">/</span>
+            <span>Diagnóstico Preliminar</span>
+          </div>
+          <h2 class="text-2xl sm:text-4xl font-extrabold text-white tracking-tight [text-wrap:balance]">
+            Cotizador & Diagnóstico de Requerimientos Técnicos
+          </h2>
+          <p class="mt-3 text-sm sm:text-base text-slate-300 leading-relaxed font-normal">
+            Seleccione el tipo de proyecto hídrico o ambiental y la región de Colombia para conocer las metodologías aplicables, la autoridad evaluadora y el plazo estimado de formulación.
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+          
+          <!-- Controls -->
+          <div class="lg:col-span-7 bg-slate-900 border border-slate-800 rounded-2xl p-6 sm:p-8 space-y-6">
+            <div>
+              <label class="block text-xs font-semibold uppercase tracking-wider text-slate-300 mb-2">
+                1. Seleccione el Tipo de Estudio o Trámite
+              </label>
+              <select id="estimator-type" class="w-full px-4 py-3 rounded-xl bg-slate-950 border border-slate-750 text-white text-sm focus:border-sky-500 focus:outline-none">
+                <option value="ronda-hidrica">Delimitación de Ronda Hídrica (2D Iber)</option>
+                <option value="permiso-vertimientos">Permiso de Vertimientos (Res. 0631 / QUAL2K)</option>
+                <option value="concesion-aguas">Concesión de Aguas (Superficial o Subterránea)</option>
+                <option value="puente-hidraulica">Estudio Hidráulico e Hidrológico para Puentes/Vías</option>
+                <option value="eia-pma">Estudio de Impacto Ambiental (EIA) / PMA</option>
+                <option value="riego-drenaje">Diseño de Riego y Drenaje Agrícola</option>
+              </select>
+            </div>
+
+            <div>
+              <label class="block text-xs font-semibold uppercase tracking-wider text-slate-300 mb-2">
+                2. Departamento / Autoridad Ambiental en Colombia
+              </label>
+              <select id="estimator-region" class="w-full px-4 py-3 rounded-xl bg-slate-950 border border-slate-750 text-white text-sm focus:border-sky-500 focus:outline-none">
+                <option value="Bogotá D.C. & Cundinamarca (SDA / CAR)">Bogotá D.C. & Cundinamarca (SDA / CAR)</option>
+                <option value="Antioquia (Corantioquia / Cornare / Corpourabá)">Antioquia (Corantioquia / Cornare / Corpourabá)</option>
+                <option value="Valle del Cauca (CVC / Dagma)">Valle del Cauca (CVC / Dagma)</option>
+                <option value="Santanderes (CDMB / CAS / Corponor)">Santanderes (CDMB / CAS / Corponor)</option>
+                <option value="Región Caribe (CRA, Cardique, Corpamag, CVS, Corpoguajira)">Región Caribe (CRA, Cardique, Corpamag, CVS, Corpoguajira)</option>
+                <option value="Llanos Orientales / Orinoquía (Cormacarena / Corporinoquia)">Llanos Orientales / Orinoquía (Cormacarena / Corporinoquia)</option>
+                <option value="Otro Departamento / Jurisdicción Nacional">Otro Departamento / Jurisdicción Nacional</option>
+              </select>
+            </div>
+
+            <div>
+              <label class="block text-xs font-semibold uppercase tracking-wider text-slate-300 mb-2">
+                3. Complejidad / Escala del Proyecto
+              </label>
+              <div class="grid grid-cols-3 gap-3">
+                <button type="button" class="complexity-btn py-2.5 px-3 rounded-xl text-xs font-medium border text-center transition-all bg-sky-600 text-white border-sky-500" data-val="Puntual / Local">Puntual / Local</button>
+                <button type="button" class="complexity-btn py-2.5 px-3 rounded-xl text-xs font-medium border text-center transition-all bg-slate-950 text-slate-300 border-slate-800 hover:border-slate-700" data-val="Intermedio / Cuenca Mediana">Intermedio</button>
+                <button type="button" class="complexity-btn py-2.5 px-3 rounded-xl text-xs font-medium border text-center transition-all bg-slate-950 text-slate-300 border-slate-800 hover:border-slate-700" data-val="Gran Escala / Complejo">Gran Escala</button>
+              </div>
+            </div>
+
+            <div>
+              <label class="block text-xs font-semibold uppercase tracking-wider text-slate-300 mb-2">
+                4. Detalles o Municipio Específico (Opcional)
+              </label>
+              <textarea id="estimator-notes" placeholder="Ej: Quebrada La Honda en Fusagasugá, se requiere estudio para ocupación de cauce y puente vehicular..." class="w-full px-4 py-3 rounded-xl bg-slate-950 border border-slate-750 text-white text-sm focus:border-sky-500 focus:outline-none h-24 resize-none"></textarea>
+            </div>
+          </div>
+
+          <!-- Diagnostic Results Card -->
+          <div class="lg:col-span-5 bg-gradient-to-b from-slate-900 to-slate-950 border border-sky-500/30 rounded-2xl p-6 sm:p-8 space-y-6">
+            <div class="flex items-center justify-between pb-4 border-b border-slate-800">
+              <span class="text-xs font-mono font-semibold uppercase text-sky-400 flex items-center gap-1.5">
+                <i data-lucide="sparkles" class="w-3.5 h-3.5"></i>
+                <span>Diagnóstico Preliminar</span>
+              </span>
+              <span class="text-xs text-slate-400 font-mono">WRE Consultoría SAS</span>
+            </div>
+
+            <div>
+              <h3 id="diag-title" class="text-xl font-bold text-white mb-1">Delimitación de Ronda Hídrica (2D Iber)</h3>
+              <p class="text-xs text-slate-400">Jurisdicción: <span id="diag-region" class="text-slate-200">Bogotá D.C. & Cundinamarca</span></p>
+            </div>
+
+            <div class="space-y-4 pt-2">
+              <div class="p-4 rounded-xl bg-slate-950/80 border border-slate-800">
+                <span class="text-[11px] font-semibold uppercase tracking-wider text-slate-400 block mb-1">Entregable Técnico Principal:</span>
+                <p id="diag-deliverable" class="text-xs text-slate-300 leading-relaxed">
+                  Memoria hidrológica, cálculo hidráulico bidimensional y mapa de zonificación física y biótica de la ronda hídrica.
+                </p>
+              </div>
+
+              <div class="grid grid-cols-2 gap-3 text-xs">
+                <div class="p-3 rounded-lg bg-slate-950/60 border border-slate-800">
+                  <span class="text-[10px] uppercase text-slate-500 block mb-0.5">Software Base</span>
+                  <span id="diag-software" class="font-mono text-sky-300 font-medium text-[11px] block">Iber 2D + Topobatimétrica</span>
+                </div>
+                <div class="p-3 rounded-lg bg-slate-950/60 border border-slate-800">
+                  <span class="text-[10px] uppercase text-slate-500 block mb-0.5">Autoridad Objetivo</span>
+                  <span id="diag-authority" class="text-slate-300 font-medium text-[11px] block">CARs / MinAmbiente</span>
+                </div>
+              </div>
+
+              <div class="flex items-center gap-2 p-3 rounded-lg bg-sky-950/30 border border-sky-900/40 text-xs text-sky-200">
+                <i data-lucide="clock" class="w-4 h-4 text-sky-400 shrink-0"></i>
+                <span>Plazo estimado de formulación: <strong id="diag-time" class="text-white">3 a 5 semanas</strong></span>
+              </div>
+            </div>
+
+            <div class="pt-4 border-t border-slate-800 space-y-3">
+              <button onclick="transferEstimatorToForm()" class="w-full inline-flex items-center justify-center gap-2 px-4 py-3 text-sm font-semibold text-white bg-sky-600 hover:bg-sky-500 rounded-xl transition-all shadow-md min-h-[46px]">
+                <span>Solicitar Propuesta Formal</span>
+                <i data-lucide="arrow-right" class="w-4 h-4"></i>
+              </button>
+              <button onclick="sendEstimatorToWhatsApp()" class="w-full inline-flex items-center justify-center gap-2 px-4 py-3 text-sm font-semibold text-emerald-400 hover:text-white bg-emerald-950/40 hover:bg-emerald-600 border border-emerald-500/40 rounded-xl transition-all min-h-[46px]">
+                <i data-lucide="message-square" class="w-4 h-4"></i>
+                <span>Consultar vía WhatsApp (+57 316 438 7493)</span>
+              </button>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ==================== RECURSOS BIBLIOGRÁFICOS ==================== -->
+    <section id="recursos" class="py-20 bg-slate-900 border-t border-slate-800 text-slate-100">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <div class="max-w-3xl mb-14">
+          <div class="flex items-center gap-2 text-xs font-semibold uppercase tracking-wider text-sky-400 mb-2">
+            <i data-lucide="graduation-cap" class="w-4 h-4"></i>
+            <span>Fundamentos Científicos</span>
+            <span aria-hidden="true" className="text-slate-600">/</span>
+            <span>Rigor Académico</span>
+          </div>
+          <h2 class="text-2xl sm:text-4xl font-extrabold text-white tracking-tight [text-wrap:balance]">
+            Recursos Bibliográficos y Modelación Especializada
+          </h2>
+          <p class="mt-3 text-sm sm:text-base text-slate-300 leading-relaxed font-normal">
+            No improvisamos. Nuestros modelos, memorias de cálculo y diseños hidráulicos se sustentan en los textos clásicos de ingeniería hidrológica y manuales de modelación numérica más respetados a nivel mundial.
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          
+          <!-- Book 1 -->
+          <div class="flex flex-col bg-slate-950/80 border border-slate-800 rounded-2xl overflow-hidden hover:border-sky-500/40 transition-all group">
+            <div class="relative aspect-[3/2] bg-slate-850 p-4 flex items-center justify-center overflow-hidden border-b border-slate-800">
+              <img src="https://files.cdn-files-a.com/uploads/10295476/400_696adf9fd2166.jpg" alt="Hidrología Estocástica" class="max-h-full max-w-full object-contain rounded shadow-lg group-hover:scale-105 transition-transform duration-300">
+            </div>
+            <div class="p-6 flex-1 flex flex-col">
+              <span class="text-[11px] font-semibold text-sky-400 uppercase tracking-wider block mb-1">Máximo Villón Béjar</span>
+              <h3 class="text-base sm:text-lg font-bold text-white group-hover:text-sky-300 transition-colors mb-3">Hidrología Estocástica</h3>
+              <p class="text-xs sm:text-sm text-slate-300 leading-relaxed mb-4 flex-1">
+                Permite a WRE calcular con precisión los periodos de retorno para obras de infraestructura (puentes, presas, canales de riego), minimizando el riesgo de subdimensionamiento o sobrecostos innecesarios.
+              </p>
+              <div class="pt-3 border-t border-slate-850 flex items-center justify-between mt-auto">
+                <button onclick="openResourceModal('villon')" class="text-xs font-semibold text-sky-400 hover:text-sky-300 inline-flex items-center gap-1 min-h-[36px]">
+                  <span>Ver Ficha Metodológica</span>
+                  <i data-lucide="chevron-right" class="w-3.5 h-3.5"></i>
+                </button>
+                <button onclick="prefillQuote('Consulta Metodológica: Hidrología Estocástica')" class="text-xs text-slate-400 hover:text-white px-2 py-1 rounded">Consultar</button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Book 2 -->
+          <div class="flex flex-col bg-slate-950/80 border border-slate-800 rounded-2xl overflow-hidden hover:border-sky-500/40 transition-all group">
+            <div class="relative aspect-[3/2] bg-slate-850 p-4 flex items-center justify-center overflow-hidden border-b border-slate-800">
+              <img src="https://files.cdn-files-a.com/uploads/10295476/400_696af1f558989.jpg" alt="Iber Applications Basic Guide" class="max-h-full max-w-full object-contain rounded shadow-lg group-hover:scale-105 transition-transform duration-300">
+            </div>
+            <div class="p-6 flex-1 flex flex-col">
+              <span class="text-[11px] font-semibold text-sky-400 uppercase tracking-wider block mb-1">Universidade da Coruña & GEAMA</span>
+              <h3 class="text-base sm:text-lg font-bold text-white group-hover:text-sky-300 transition-colors mb-3">Iber Applications Basic Guide</h3>
+              <p class="text-xs sm:text-sm text-slate-300 leading-relaxed mb-4 flex-1">
+                Mapas de Inundabilidad de Alta Precisión: A diferencia de la modelación 1D, Iber permite ver hacia dónde se desplaza el agua en terrenos llanos. Esto es vital para los Estudios Ambientales de WRE al delimitar rondas hídricas.
+              </p>
+              <div class="pt-3 border-t border-slate-850 flex items-center justify-between mt-auto">
+                <button onclick="openResourceModal('iber')" class="text-xs font-semibold text-sky-400 hover:text-sky-300 inline-flex items-center gap-1 min-h-[36px]">
+                  <span>Ver Ficha Metodológica</span>
+                  <i data-lucide="chevron-right" class="w-3.5 h-3.5"></i>
+                </button>
+                <button onclick="prefillQuote('Consulta Metodológica: Modelación Iber 2D')" class="text-xs text-slate-400 hover:text-white px-2 py-1 rounded">Consultar</button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Book 3 -->
+          <div class="flex flex-col bg-slate-950/80 border border-slate-800 rounded-2xl overflow-hidden hover:border-sky-500/40 transition-all group">
+            <div class="relative aspect-[3/2] bg-slate-850 p-4 flex items-center justify-center overflow-hidden border-b border-slate-800">
+              <img src="https://files.cdn-files-a.com/uploads/10295476/400_696af933cc137.jpg" alt="Tratamiento de Aguas Residuales" class="max-h-full max-w-full object-contain rounded shadow-lg group-hover:scale-105 transition-transform duration-300">
+            </div>
+            <div class="p-6 flex-1 flex flex-col">
+              <span class="text-[11px] font-semibold text-sky-400 uppercase tracking-wider block mb-1">R.S. Ramalho</span>
+              <h3 class="text-base sm:text-lg font-bold text-white group-hover:text-sky-300 transition-colors mb-3">Tratamiento de Aguas Residuales</h3>
+              <p class="text-xs sm:text-sm text-slate-300 leading-relaxed mb-4 flex-1">
+                Realizar diagnósticos de vertimientos, diseñar sistemas de tratamiento para comunidades rurales o proyectos agrícolas, y garantizar que los proyectos cumplan con la normativa de calidad de agua (Res. 0631).
+              </p>
+              <div class="pt-3 border-t border-slate-850 flex items-center justify-between mt-auto">
+                <button onclick="openResourceModal('ramalho')" class="text-xs font-semibold text-sky-400 hover:text-sky-300 inline-flex items-center gap-1 min-h-[36px]">
+                  <span>Ver Ficha Metodológica</span>
+                  <i data-lucide="chevron-right" class="w-3.5 h-3.5"></i>
+                </button>
+                <button onclick="prefillQuote('Consulta Metodológica: Tratamiento de Aguas Residuales')" class="text-xs text-slate-400 hover:text-white px-2 py-1 rounded">Consultar</button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Book 4 -->
+          <div class="flex flex-col bg-slate-950/80 border border-slate-800 rounded-2xl overflow-hidden hover:border-sky-500/40 transition-all group">
+            <div class="relative aspect-[3/2] bg-slate-850 p-4 flex items-center justify-center overflow-hidden border-b border-slate-800">
+              <img src="https://files.cdn-files-a.com/uploads/10295476/400_696bc45eb3e29.jpg" alt="Surface Water Quality Modeling" class="max-h-full max-w-full object-contain rounded shadow-lg group-hover:scale-105 transition-transform duration-300">
+            </div>
+            <div class="p-6 flex-1 flex flex-col">
+              <span class="text-[11px] font-semibold text-sky-400 uppercase tracking-wider block mb-1">Steven C. Chapra</span>
+              <h3 class="text-base sm:text-lg font-bold text-white group-hover:text-sky-300 transition-colors mb-3">Surface Water Quality Modeling</h3>
+              <p class="text-xs sm:text-sm text-slate-300 leading-relaxed mb-4 flex-1">
+                Permisos de Vertimientos, Gestión de Aguas Subterráneas y Superficiales, Implementación de Software (QUAL2K) y cálculo de capacidad de asimilación hídrica.
+              </p>
+              <div class="pt-3 border-t border-slate-850 flex items-center justify-between mt-auto">
+                <button onclick="openResourceModal('chapra')" class="text-xs font-semibold text-sky-400 hover:text-sky-300 inline-flex items-center gap-1 min-h-[36px]">
+                  <span>Ver Ficha Metodológica</span>
+                  <i data-lucide="chevron-right" class="w-3.5 h-3.5"></i>
+                </button>
+                <button onclick="prefillQuote('Consulta Metodológica: Modelación QUAL2K Chapra')" class="text-xs text-slate-400 hover:text-white px-2 py-1 rounded">Consultar</button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Book 5 -->
+          <div class="flex flex-col bg-slate-950/80 border border-slate-800 rounded-2xl overflow-hidden hover:border-sky-500/40 transition-all group">
+            <div class="relative aspect-[3/2] bg-slate-850 p-4 flex items-center justify-center overflow-hidden border-b border-slate-800">
+              <img src="https://files.cdn-files-a.com/uploads/10295476/400_6a7cb3349cd76.png" alt="Urban Drainage" class="max-h-full max-w-full object-contain rounded shadow-lg group-hover:scale-105 transition-transform duration-300">
+            </div>
+            <div class="p-6 flex-1 flex flex-col">
+              <span class="text-[11px] font-semibold text-sky-400 uppercase tracking-wider block mb-1">David Butler & John W. Davies</span>
+              <h3 class="text-base sm:text-lg font-bold text-white group-hover:text-sky-300 transition-colors mb-3">Urban Drainage</h3>
+              <p class="text-xs sm:text-sm text-slate-300 leading-relaxed mb-4 flex-1">
+                Sistemas Urbanos de Drenaje Sostenible (SUDS), modelación hidrodinámica de colectores pluviales y sanitarios, y control de escorrentía en áreas urbanas e infraestructura.
+              </p>
+              <div class="pt-3 border-t border-slate-850 flex items-center justify-between mt-auto">
+                <button onclick="openResourceModal('urban')" class="text-xs font-semibold text-sky-400 hover:text-sky-300 inline-flex items-center gap-1 min-h-[36px]">
+                  <span>Ver Ficha Metodológica</span>
+                  <i data-lucide="chevron-right" class="w-3.5 h-3.5"></i>
+                </button>
+                <button onclick="prefillQuote('Consulta Metodológica: Drenaje Urbano y SUDS')" class="text-xs text-slate-400 hover:text-white px-2 py-1 rounded">Consultar</button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Book 6 -->
+          <div class="flex flex-col bg-slate-950/80 border border-slate-800 rounded-2xl overflow-hidden hover:border-sky-500/40 transition-all group">
+            <div class="relative aspect-[3/2] bg-slate-850 p-4 flex items-center justify-center overflow-hidden border-b border-slate-800">
+              <img src="https://files.cdn-files-a.com/uploads/10295476/400_6a2c81aea49b0.jpg" alt="Debris-flow Hazards" class="max-h-full max-w-full object-contain rounded shadow-lg group-hover:scale-105 transition-transform duration-300">
+            </div>
+            <div class="p-6 flex-1 flex flex-col">
+              <span class="text-[11px] font-semibold text-sky-400 uppercase tracking-wider block mb-1">O. Hungr, M. Jakob, D.M. Cruden</span>
+              <h3 class="text-base sm:text-lg font-bold text-white group-hover:text-sky-300 transition-colors mb-3">Debris-flow Hazards and Phenomena</h3>
+              <p class="text-xs sm:text-sm text-slate-300 leading-relaxed mb-4 flex-1">
+                Evaluación y modelación de flujos de detritos, avenidas torrenciales y remoción en masa en cuencas de montaña andinas para planes de gestión de riesgo y estudios de impacto.
+              </p>
+              <div class="pt-3 border-t border-slate-850 flex items-center justify-between mt-auto">
+                <button onclick="openResourceModal('debris')" class="text-xs font-semibold text-sky-400 hover:text-sky-300 inline-flex items-center gap-1 min-h-[36px]">
+                  <span>Ver Ficha Metodológica</span>
+                  <i data-lucide="chevron-right" class="w-3.5 h-3.5"></i>
+                </button>
+                <button onclick="prefillQuote('Consulta Metodológica: Avenidas Torrenciales y Debris Flow')" class="text-xs text-slate-400 hover:text-white px-2 py-1 rounded">Consultar</button>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ==================== CONTACTO ==================== -->
+    <section id="contacto" class="py-20 bg-slate-900 text-slate-100 border-t border-slate-800">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <div class="max-w-3xl mb-14">
+          <div class="flex items-center gap-2 text-xs font-semibold uppercase tracking-wider text-sky-400 mb-2">
+            <span>Contacto Directo</span>
+            <span aria-hidden="true" className="text-slate-600">/</span>
+            <span>Atención Personalizada</span>
+          </div>
+          <h2 class="text-2xl sm:text-4xl font-extrabold text-white tracking-tight [text-wrap:balance]">
+            Inicie su Proyecto con WRE Consultoría
+          </h2>
+          <p class="mt-3 text-sm sm:text-base text-slate-300 leading-relaxed font-normal">
+            Contáctenos para estructurar la propuesta técnica y económica de sus estudios hidrológicos, hidráulicos o ambientales. Respuesta ágil y confidencialidad garantizada.
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+          
+          <!-- Info Column -->
+          <div class="lg:col-span-5 space-y-6">
+            <div class="bg-slate-950/80 border border-slate-800 rounded-2xl p-6 sm:p-7 space-y-6">
+              <h3 class="text-lg font-bold text-white mb-2">Canales de Atención</h3>
+
+              <div class="space-y-4 text-sm">
+                <!-- Location -->
+                <div class="flex items-start gap-3.5">
+                  <div class="w-9 h-9 rounded-lg bg-sky-500/10 border border-sky-500/20 flex items-center justify-center text-sky-400 shrink-0">
+                    <i data-lucide="map-pin" class="w-5 h-5"></i>
+                  </div>
+                  <div>
+                    <span class="text-xs uppercase text-slate-400 font-semibold block">Sede Principal</span>
+                    <span class="text-white font-medium">Bogotá, Bogota D.C., Colombia</span>
+                    <span class="text-xs text-slate-400 block mt-0.5">Cobertura de proyectos a nivel nacional</span>
+                  </div>
+                </div>
+
+                <!-- Email -->
+                <div class="flex items-start gap-3.5">
+                  <div class="w-9 h-9 rounded-lg bg-sky-500/10 border border-sky-500/20 flex items-center justify-center text-sky-400 shrink-0">
+                    <i data-lucide="mail" class="w-5 h-5"></i>
+                  </div>
+                  <div>
+                    <span class="text-xs uppercase text-slate-400 font-semibold block">Correo Electrónico</span>
+                    <a href="mailto:wreconsultoriasas@gmail.com" class="text-white hover:text-sky-400 font-medium transition-colors break-all">
+                      wreconsultoriasas@gmail.com
+                    </a>
+                  </div>
+                </div>
+
+                <!-- Phone -->
+                <div class="flex items-start gap-3.5">
+                  <div class="w-9 h-9 rounded-lg bg-emerald-500/10 border border-emerald-500/20 flex items-center justify-center text-emerald-400 shrink-0">
+                    <i data-lucide="phone" class="w-5 h-5"></i>
+                  </div>
+                  <div>
+                    <span class="text-xs uppercase text-slate-400 font-semibold block">Línea Directa / WhatsApp</span>
+                    <a href="https://wa.me/573164387493" target="_blank" rel="noopener noreferrer" class="text-white hover:text-emerald-400 font-semibold font-mono text-base transition-colors">
+                      +57 316 438 7493
+                    </a>
+                    <span class="text-xs text-emerald-400 block mt-0.5">Atención directa por chat</span>
+                  </div>
+                </div>
+
+                <!-- Schedule -->
+                <div class="flex items-start gap-3.5">
+                  <div class="w-9 h-9 rounded-lg bg-slate-800 flex items-center justify-center text-slate-400 shrink-0">
+                    <i data-lucide="clock" class="w-5 h-5"></i>
+                  </div>
+                  <div>
+                    <span class="text-xs uppercase text-slate-400 font-semibold block">Horario de Oficina</span>
+                    <span class="text-slate-300">07:00 am - 6:00 pm (Lunes a Sábado)</span>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Social links -->
+              <div class="pt-4 border-t border-slate-850 flex items-center gap-3">
+                <a href="https://www.linkedin.com/in/wre-consultoria-34122634b/" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 px-3.5 py-2 rounded-lg bg-slate-900 hover:bg-slate-800 text-xs text-slate-300 hover:text-white border border-slate-800 transition-colors">
+                  <i data-lucide="linkedin" class="w-4 h-4 text-sky-400"></i>
+                  <span>LinkedIn Oficial</span>
+                </a>
+                <a href="https://wa.me/573164387493" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 px-3.5 py-2 rounded-lg bg-emerald-950/40 hover:bg-emerald-900/40 text-xs text-emerald-400 border border-emerald-500/30 transition-colors">
+                  <i data-lucide="message-circle" class="w-4 h-4"></i>
+                  <span>WhatsApp</span>
+                </a>
+              </div>
+            </div>
+
+            <div class="p-5 rounded-2xl bg-slate-950/40 border border-slate-800 flex items-start gap-3 text-xs text-slate-400">
+              <i data-lucide="shield-check" class="w-5 h-5 text-sky-400 shrink-0 mt-0.5"></i>
+              <p>
+                Todos los proyectos se entregan con memorias de cálculo auditables, archivos digitales de modelación (Iber, HEC, MODFLOW) y soporte técnico ante observaciones de las CARs.
+              </p>
+            </div>
+          </div>
+
+          <!-- Form Column -->
+          <div class="lg:col-span-7 bg-slate-950 border border-slate-800 rounded-2xl p-6 sm:p-8">
+            <h3 class="text-lg font-bold text-white mb-1">Formulario de Solicitud de Consultoría</h3>
+            <p class="text-xs text-slate-400 mb-6">Complete los campos y un especialista técnico revisará sus especificaciones a la brevedad.</p>
+
+            <form id="contact-form" onsubmit="handleContactSubmit(event)" class="space-y-4">
+              <div id="contact-alert" class="hidden p-3.5 rounded-lg bg-red-950/50 border border-red-500/40 text-red-200 text-xs flex items-center gap-2">
+                <i data-lucide="alert-circle" class="w-4 h-4 text-red-400 shrink-0"></i>
+                <span id="contact-alert-msg"></span>
+              </div>
+
+              <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                <div>
+                  <label class="block text-xs font-semibold uppercase tracking-wider text-slate-300 mb-1.5">Nombre Completo / Empresa *</label>
+                  <input type="text" id="form-name" required placeholder="Ej: Ing. Carlos Gómez / Empresa SAS" class="w-full px-4 py-2.5 rounded-xl bg-slate-900 border border-slate-750 text-white text-sm focus:border-sky-500 focus:outline-none">
+                </div>
+                <div>
+                  <label class="block text-xs font-semibold uppercase tracking-wider text-slate-300 mb-1.5">Teléfono / WhatsApp *</label>
+                  <input type="tel" id="form-phone" required placeholder="Ej: +57 310 123 4567" class="w-full px-4 py-2.5 rounded-xl bg-slate-900 border border-slate-750 text-white text-sm focus:border-sky-500 focus:outline-none">
+                </div>
+              </div>
+
+              <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                <div>
+                  <label class="block text-xs font-semibold uppercase tracking-wider text-slate-300 mb-1.5">Correo Electrónico *</label>
+                  <input type="email" id="form-email" required placeholder="contacto@empresa.com" class="w-full px-4 py-2.5 rounded-xl bg-slate-900 border border-slate-750 text-white text-sm focus:border-sky-500 focus:outline-none">
+                </div>
+                <div>
+                  <label class="block text-xs font-semibold uppercase tracking-wider text-slate-300 mb-1.5">Tipo de Estudio</label>
+                  <select id="form-service" class="w-full px-4 py-2.5 rounded-xl bg-slate-900 border border-slate-750 text-white text-sm focus:border-sky-500 focus:outline-none">
+                    <option value="General">Seleccione un estudio...</option>
+                    <option value="Estudios de Hidrología">Estudios de Hidrología</option>
+                    <option value="Estudios de Hidráulica">Estudios de Hidráulica</option>
+                    <option value="Estudios de Aguas Subterráneas">Estudios de Aguas Subterráneas</option>
+                    <option value="Estudios de Calidad del Agua">Estudios de Calidad del Agua</option>
+                    <option value="Estudios de Riego y Drenaje Agrícola">Estudios de Riego y Drenaje Agrícola</option>
+                    <option value="Estudios Ambientales (EIA / PMA / POMCA)">Estudios Ambientales (EIA / PMA / POMCA)</option>
+                    <option value="Otro Requerimiento">Otro Requerimiento</option>
+                  </select>
+                </div>
+              </div>
+
+              <div>
+                <label class="block text-xs font-semibold uppercase tracking-wider text-slate-300 mb-1.5">Descripción del Proyecto y Localización *</label>
+                <textarea id="form-message" rows="4" required placeholder="Indique la ubicación del proyecto, fuente hídrica o trámite ante la CAR o ANLA..." class="w-full px-4 py-2.5 rounded-xl bg-slate-900 border border-slate-750 text-white text-sm focus:border-sky-500 focus:outline-none resize-none"></textarea>
+              </div>
+
+              <div class="pt-2 flex flex-col sm:flex-row items-stretch sm:items-center justify-between gap-3">
+                <button type="submit" class="inline-flex items-center justify-center gap-2 px-6 py-3 text-sm font-semibold text-white bg-sky-600 hover:bg-sky-500 rounded-xl transition-all shadow-md min-h-[46px]">
+                  <i data-lucide="send" class="w-4 h-4"></i>
+                  <span>Enviar Solicitud</span>
+                </button>
+                <button type="button" onclick="sendFormToWhatsApp()" class="inline-flex items-center justify-center gap-2 px-4 py-3 text-sm font-medium text-emerald-400 hover:text-white bg-emerald-950/30 hover:bg-emerald-600/80 border border-emerald-500/30 rounded-xl transition-colors min-h-[46px]">
+                  <i data-lucide="message-circle" class="w-4 h-4"></i>
+                  <span>Enviar por WhatsApp</span>
+                </button>
+              </div>
+            </form>
+
+            <div id="contact-success" class="hidden p-8 text-center bg-slate-900/80 border border-emerald-500/40 rounded-xl">
+              <div class="w-12 h-12 bg-emerald-500/20 text-emerald-400 rounded-full flex items-center justify-center mx-auto mb-4">
+                <i data-lucide="check-circle-2" class="w-7 h-7"></i>
+              </div>
+              <h4 class="text-lg font-bold text-white mb-2">¡Solicitud Registrada con Éxito!</h4>
+              <p class="text-sm text-slate-300 max-w-md mx-auto mb-6">
+                Gracias por comunicarse con <strong>WRE Consultoría S.A.S.</strong> Uno de nuestros ingenieros especialistas revisará su solicitud en breve.
+              </p>
+              <button onclick="resetContactForm()" class="px-4 py-2 text-xs font-semibold text-slate-300 hover:text-white bg-slate-800 rounded-lg">
+                Enviar otro mensaje
+              </button>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ==================== FOOTER ==================== -->
+  <footer class="bg-slate-950 text-slate-400 border-t border-slate-850 pt-16 pb-12 text-xs">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8 mb-12">
+        
+        <div class="lg:col-span-2 space-y-4">
+          <div class="flex items-center gap-2.5 text-white">
+            <div class="w-8 h-8 rounded-lg bg-sky-600/20 border border-sky-500/40 flex items-center justify-center text-sky-400">
+              <i data-lucide="waves" class="w-4 h-4 text-sky-400"></i>
+            </div>
+            <span class="text-base font-bold text-white tracking-tight">WRE Consultoría SAS</span>
+          </div>
+          <p class="text-slate-400 text-xs sm:text-sm leading-relaxed max-w-sm">
+            Empresa líder en consultoría de recursos hídricos y estudios ambientales. Modelación hidrológica, hidráulica 2D, hidrogeología de acuíferos y licenciamiento ambiental en Colombia.
+          </p>
+          <div class="flex items-center gap-3 pt-2">
+            <a href="https://www.linkedin.com/in/wre-consultoria-34122634b/" target="_blank" rel="noopener noreferrer" class="w-8 h-8 rounded-lg bg-slate-900 border border-slate-800 flex items-center justify-center text-slate-400 hover:text-white">
+              <i data-lucide="linkedin" class="w-4 h-4"></i>
+            </a>
+            <a href="https://wa.me/573164387493" target="_blank" rel="noopener noreferrer" class="w-8 h-8 rounded-lg bg-emerald-950/40 border border-emerald-500/30 flex items-center justify-center text-emerald-400 hover:text-white">
+              <i data-lucide="message-circle" class="w-4 h-4"></i>
+            </a>
+          </div>
+        </div>
+
+        <div>
+          <h4 class="text-xs font-semibold uppercase tracking-wider text-white mb-3">Navegación</h4>
+          <ul class="space-y-2">
+            <li><a href="#inicio" class="hover:text-white">Página de Inicio</a></li>
+            <li><a href="#quienes-somos" class="hover:text-white">Quienes Somos</a></li>
+            <li><a href="#servicios" class="hover:text-white">Servicios</a></li>
+            <li><a href="#cotizador" class="hover:text-white">Cotizador & Diagnóstico</a></li>
+            <li><a href="#recursos" class="hover:text-white">Recursos Bibliográficos</a></li>
+            <li><a href="#contacto" class="hover:text-white">Contacto</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="text-xs font-semibold uppercase tracking-wider text-white mb-3">Áreas Técnicas</h4>
+          <ul class="space-y-2">
+            <li><a href="#servicios" class="hover:text-white">Estudios de Hidrología</a></li>
+            <li><a href="#servicios" class="hover:text-white">Modelación Hidráulica 2D Iber</a></li>
+            <li><a href="#servicios" class="hover:text-white">Aguas Subterráneas</a></li>
+            <li><a href="#servicios" class="hover:text-white">Calidad del Agua & Vertimientos</a></li>
+            <li><a href="#servicios" class="hover:text-white">Riego y Drenaje Agrícola</a></li>
+            <li><a href="#servicios" class="hover:text-white">Estudios Ambientales (EIA/PMA)</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="text-xs font-semibold uppercase tracking-wider text-white mb-3">Sede en Colombia</h4>
+          <ul class="space-y-2.5">
+            <li class="flex items-start gap-2">
+              <i data-lucide="map-pin" class="w-4 h-4 text-sky-400 shrink-0 mt-0.5"></i>
+              <span>Bogotá, Bogota D.C., Colombia</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <i data-lucide="phone" class="w-4 h-4 text-emerald-400 shrink-0 mt-0.5"></i>
+              <a href="tel:573164387493" class="hover:text-white font-mono">+57 316 438 7493</a>
+            </li>
+            <li class="flex items-start gap-2">
+              <i data-lucide="mail" class="w-4 h-4 text-sky-400 shrink-0 mt-0.5"></i>
+              <a href="mailto:wreconsultoriasas@gmail.com" class="hover:text-white break-all">wreconsultoriasas@gmail.com</a>
+            </li>
+          </ul>
+        </div>
+
+      </div>
+
+      <div class="pt-8 border-t border-slate-900 flex flex-col sm:flex-row items-center justify-between gap-4">
+        <p class="text-slate-500 text-[11px] text-center sm:text-left">
+          Copyright © 2026 WRE Consultoría S.A.S. Todos los derechos reservados.
+        </p>
+        <a href="#inicio" class="flex items-center gap-1.5 text-[11px] text-slate-400 hover:text-white px-3 py-1.5 rounded-lg bg-slate-900 border border-slate-800">
+          <span>Subir al inicio</span>
+          <i data-lucide="arrow-up" class="w-3.5 h-3.5"></i>
+        </a>
+      </div>
+    </div>
+
+    <!-- Floating WhatsApp Button -->
+    <a href="https://wa.me/573164387493" target="_blank" rel="noopener noreferrer" class="fixed bottom-6 right-6 z-40 p-3 sm:px-4 sm:py-3 rounded-full bg-emerald-600 hover:bg-emerald-500 text-white shadow-xl transition-all flex items-center gap-2 group hover:scale-105 active:scale-95" aria-label="WhatsApp Asesoría">
+      <i data-lucide="message-circle" class="w-6 h-6"></i>
+      <span class="text-xs font-semibold hidden sm:inline">WhatsApp Asesoría</span>
+    </a>
+  </footer>
+
+  <!-- ==================== MODALS ==================== -->
+
+  <!-- Service Detail Modal -->
+  <div id="service-modal" class="fixed inset-0 z-50 hidden items-center justify-center p-4 sm:p-6 bg-slate-950/80 backdrop-blur-sm">
+    <div class="relative w-full max-w-2xl max-h-[90vh] overflow-y-auto bg-slate-900 border border-slate-750 rounded-2xl shadow-2xl p-6 sm:p-8 text-slate-100">
+      <button onclick="closeServiceModal()" class="absolute top-5 right-5 p-2 text-slate-400 hover:text-white bg-slate-800 rounded-lg">
+        <i data-lucide="x" class="w-5 h-5"></i>
+      </button>
+      <div id="modal-service-content"></div>
+    </div>
+  </div>
+
+  <!-- Resource Detail Modal -->
+  <div id="resource-modal" class="fixed inset-0 z-50 hidden items-center justify-center p-4 sm:p-6 bg-slate-950/80 backdrop-blur-sm">
+    <div class="relative w-full max-w-xl max-h-[90vh] overflow-y-auto bg-slate-900 border border-slate-750 rounded-2xl shadow-2xl p-6 sm:p-8 text-slate-100">
+      <button onclick="closeResourceModal()" class="absolute top-5 right-5 p-2 text-slate-400 hover:text-white bg-slate-800 rounded-lg">
+        <i data-lucide="x" class="w-5 h-5"></i>
+      </button>
+      <div id="modal-resource-content"></div>
+    </div>
+  </div>
+
+  <!-- ==================== JAVASCRIPT ==================== -->
+  <script>
+    // Initialize Lucide Icons
+    lucide.createIcons();
+
+    // Mobile Menu Toggle
+    const mobileBtn = document.getElementById('mobile-menu-btn');
+    const mobileMenu = document.getElementById('mobile-menu');
+    const menuOpen = document.getElementById('menu-icon-open');
+    const menuClose = document.getElementById('menu-icon-close');
+
+    mobileBtn.addEventListener('click', () => {
+      const isHidden = mobileMenu.classList.contains('hidden');
+      if (isHidden) {
+        mobileMenu.classList.remove('hidden');
+        menuOpen.classList.add('hidden');
+        menuClose.classList.remove('hidden');
+      } else {
+        mobileMenu.classList.add('hidden');
+        menuOpen.classList.remove('hidden');
+        menuClose.classList.add('hidden');
+      }
+    });
+
+    document.querySelectorAll('.mobile-nav-link').forEach(link => {
+      link.addEventListener('click', () => {
+        mobileMenu.classList.add('hidden');
+        menuOpen.classList.remove('hidden');
+        menuClose.classList.add('hidden');
+      });
+    });
+
+    // Service Filters
+    const filterButtons = document.querySelectorAll('.cat-btn');
+    const serviceCards = document.querySelectorAll('.service-card');
+
+    filterButtons.forEach(btn => {
+      btn.addEventListener('click', () => {
+        const cat = btn.getAttribute('data-cat');
+        filterButtons.forEach(b => {
+          b.className = 'cat-btn px-4 py-2 text-xs sm:text-sm font-medium rounded-lg bg-slate-900 text-slate-300 hover:text-white border border-slate-800 whitespace-nowrap min-h-[40px]';
+        });
+        btn.className = 'cat-btn px-4 py-2 text-xs sm:text-sm font-semibold rounded-lg bg-sky-600 text-white shadow-sm whitespace-nowrap min-h-[40px]';
+
+        serviceCards.forEach(card => {
+          if (cat === 'all' || card.getAttribute('data-category') === cat) {
+            card.style.display = 'flex';
+          } else {
+            card.style.display = 'none';
+          }
+        });
+      });
+    });
+
+    // Environmental Instruments Database
+    const instruments = [
+      { acr: 'EIA', name: 'Estudio de Impacto Ambiental', auth: 'ANLA / CARs', desc: 'Instrumento básico para evaluar la viabilidad de proyectos que requieren licencia ambiental.', obj: 'Prevenir, mitigar y compensar impactos significativos en ecosistemas y comunidades.' },
+      { acr: 'PMA', name: 'Plan de Manejo Ambiental', auth: 'Autoridades Ambientales', desc: 'Conjunto de medidas y programas de monitoreo ambiental exigidos durante ejecución de obras.', obj: 'Garantizar el cumplimiento de directrices ambientales y mitigación en campo.' },
+      { acr: 'PORH', name: 'Plan de Ordenamiento del Recurso Hídrico', auth: 'CARs / SDA', desc: 'Instrumento para clasificar y fijar destinación de uso en cuencas superficiales y subterráneas.', obj: 'Definir objetivos y límites permisibles de calidad para tramos hídricos.' },
+      { acr: 'POMCA', name: 'Plan de Ordenación y Manejo de Cuencas', auth: 'CARs', desc: 'Planificación integral de uso de recursos naturales en la cuenca hidrográfica.', obj: 'Zonificar ambientalmente el territorio y preservar zonas de recarga hídrica.' },
+      { acr: 'DAA', name: 'Diagnóstico Ambiental de Alternativas', auth: 'ANLA', desc: 'Evaluación comparativa de trazados o corredores viales/eléctricos.', obj: 'Identificar la alternativa de menor impacto social y ambiental.' },
+      { acr: 'PUEAA', name: 'Programa de Uso Eficiente y Ahorro del Agua', auth: 'CARs / MinAmbiente', desc: 'Programa obligatorio para todo concesionario de agua según Ley 373 de 1997.', obj: 'Optimizar el consumo hídrico, reducir pérdidas y promover reúso.' },
+      { acr: 'PMAA', name: 'Plan de Manejo Ambiental de Acuíferos', auth: 'CARs', desc: 'Protección y recarga de sistemas hidrogeológicos subterráneos.', obj: 'Evitar sobreexplotación y contaminación de reservas subterráneas.' },
+      { acr: 'PSMV', name: 'Plan de Saneamiento y Manejo de Vertimientos', auth: 'Municipios / CARs', desc: 'Planificación de colectores, interceptores y plantas de tratamiento (PTAR).', obj: 'Descontaminar corrientes hídricas receptoras urbanas y rurales.' },
+      { acr: 'PIGCCS', name: 'Plan de Cambio Climático Sectorial', auth: 'MinAmbiente', desc: 'Estrategias de resiliencia y mitigación frente a variabilidad climática.', obj: 'Adaptar infraestructuras a sequías e inundaciones extremas.' },
+      { acr: 'PGIRS', name: 'Plan de Gestión de Residuos Sólidos', auth: 'Alcaldías', desc: 'Gestión integral de residuos en territorio municipal.', obj: 'Aprovechamiento y protección de rondas hídricas.' },
+      { acr: 'PDA', name: 'Plan Departamental de Agua', auth: 'Gobernaciones', desc: 'Articulación de inversiones en agua potable y saneamiento básico.', obj: 'Aumentar cobertura y continuidad en zonas rurales y urbanas.' },
+      { acr: 'AVR', name: 'Análisis de Vulnerabilidad y Riesgo', auth: 'Gestión del Riesgo', desc: 'Evaluación de amenazas por avenidas torrenciales e inundaciones.', obj: 'Delimitar zonas de riesgo no mitigable y obras de contención.' },
+      { acr: 'ICA', name: 'Índice de Calidad del Agua', auth: 'IDEAM / CARs', desc: 'Indicador fisicoquímico sintético del estado del agua (0 a 1).', obj: 'Medir el impacto de vertimientos sobre la salud del cuerpo receptor.' }
+    ];
+
+    const instContainer = document.getElementById('instrument-buttons');
+    const detailBox = document.getElementById('instrument-detail-box');
+
+    instruments.forEach((inst, index) => {
+      const btn = document.createElement('button');
+      btn.className = `px-3 py-2 text-xs font-semibold rounded-lg border transition-all text-left flex items-center gap-1.5 ${index === 0 ? 'bg-emerald-600 text-white border-emerald-500' : 'bg-slate-950 text-slate-200 border-slate-800 hover:border-slate-700'}`;
+      btn.innerHTML = `<span class="font-mono tracking-wider">${inst.acr}</span><span class="text-[11px] text-slate-400 hidden sm:inline">· ${inst.name.slice(0, 22)}...</span>`;
+      btn.onclick = () => showInstrument(inst, btn);
+      instContainer.appendChild(btn);
+    });
+
+    function showInstrument(inst, activeBtn) {
+      document.querySelectorAll('#instrument-buttons button').forEach(b => {
+        b.className = 'px-3 py-2 text-xs font-semibold rounded-lg border transition-all text-left flex items-center gap-1.5 bg-slate-950 text-slate-200 border-slate-800 hover:border-slate-700';
+      });
+      activeBtn.className = 'px-3 py-2 text-xs font-semibold rounded-lg border transition-all text-left flex items-center gap-1.5 bg-emerald-600 text-white border-emerald-500';
+
+      detailBox.innerHTML = `
+        <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2 mb-3">
+          <div class="flex items-center gap-3">
+            <span class="px-2.5 py-1 text-xs font-mono font-bold bg-emerald-500/20 text-emerald-300 border border-emerald-500/40 rounded">${inst.acr}</span>
+            <h4 class="text-base sm:text-lg font-bold text-white">${inst.name}</h4>
+          </div>
+          <span class="text-xs text-slate-400 font-mono">Autoridad: <span class="text-slate-200">${inst.auth}</span></span>
+        </div>
+        <p class="text-xs sm:text-sm text-slate-300 mb-3 leading-relaxed">${inst.desc}</p>
+        <div class="pt-3 border-t border-slate-850 flex flex-col sm:flex-row sm:items-center justify-between gap-3 text-xs">
+          <p class="text-slate-400"><strong class="text-slate-200">Objetivo Técnico:</strong> ${inst.obj}</p>
+          <button onclick="prefillQuote('Estudio ${inst.acr}: ${inst.name}')" class="text-emerald-400 hover:text-emerald-300 font-semibold whitespace-nowrap">Cotizar este Instrumento →</button>
+        </div>
+      `;
+    }
+    showInstrument(instruments[0], instContainer.firstChild);
+
+    // Estimator Diagnostic Logic
+    const estimatorData = {
+      'ronda-hidrica': {
+        title: 'Delimitación de Ronda Hídrica (2D Iber)',
+        time: '3 a 5 semanas',
+        software: 'Iber 2D + Topobatimétrica',
+        authority: 'CARs Regionales / MinAmbiente',
+        deliverable: 'Memoria hidrológica, cálculo hidráulico bidimensional y mapa de zonificación física y biótica de la ronda hídrica.'
+      },
+      'permiso-vertimientos': {
+        title: 'Permiso de Vertimientos (Res. 0631 / QUAL2K)',
+        time: '4 a 6 semanas',
+        software: 'QUAL2K + Laboratorio IDEAM',
+        authority: 'CARs / SDA Bogotá / ANLA',
+        deliverable: 'Caracterización físico-química, modelación de capacidad de asimilación y dilución, y manual de operación de PTAR.'
+      },
+      'concesion-aguas': {
+        title: 'Concesión de Aguas (Superficial o Subterránea)',
+        time: '3 a 5 semanas',
+        software: 'Balance Hídrico + Ensayos de Bombeo',
+        authority: 'CARs Regionales',
+        deliverable: 'Cálculo de oferta hídrica, curvas de duración de caudales, prueba de bombeo o aforos directos y formulación PUEAA.'
+      },
+      'puente-hidraulica': {
+        title: 'Estudio Hidráulico e Hidrológico para Puentes/Vías',
+        time: '2 a 4 semanas',
+        software: 'HEC-HMS + HEC-RAS 1D/2D + Civil 3D',
+        authority: 'INVÍAS / ANI / Alcaldías',
+        deliverable: 'Curvas IDF, crecientes para Tr=100 años, cálculo de socavación general y local de pilas y gálibo hidráulico.'
+      },
+      'eia-pma': {
+        title: 'Estudio de Impacto Ambiental (EIA) / PMA',
+        time: '8 a 12 semanas',
+        software: 'GeoDataBase MinAmbiente + GIS',
+        authority: 'ANLA / Corporaciones Regionales',
+        deliverable: 'Línea base abiótica, biótica y socioeconómica, evaluación de impactos y fichas del Plan de Manejo Ambiental.'
+      },
+      'riego-drenaje': {
+        title: 'Diseño de Riego y Drenaje Agrícola',
+        time: '4 a 6 semanas',
+        software: 'CROPWAT + EPANET + Civil 3D',
+        authority: 'ADR / Propietario Privado',
+        deliverable: 'Cálculo de evapotranspiración de cultivos, dimensionamiento de canales, tuberías y red de drenaje para control de salinidad.'
+      }
+    };
+
+    let selectedComplexity = 'Puntual / Local';
+
+    document.querySelectorAll('.complexity-btn').forEach(btn => {
+      btn.addEventListener('click', () => {
+        document.querySelectorAll('.complexity-btn').forEach(b => {
+          b.className = 'complexity-btn py-2.5 px-3 rounded-xl text-xs font-medium border text-center transition-all bg-slate-950 text-slate-300 border-slate-800 hover:border-slate-700';
+        });
+        btn.className = 'complexity-btn py-2.5 px-3 rounded-xl text-xs font-medium border text-center transition-all bg-sky-600 text-white border-sky-500';
+        selectedComplexity = btn.getAttribute('data-val');
+      });
+    });
+
+    function updateEstimator() {
+      const type = document.getElementById('estimator-type').value;
+      const region = document.getElementById('estimator-region').value;
+      const data = estimatorData[type];
+
+      document.getElementById('diag-title').textContent = data.title;
+      document.getElementById('diag-region').textContent = region;
+      document.getElementById('diag-deliverable').textContent = data.deliverable;
+      document.getElementById('diag-software').textContent = data.software;
+      document.getElementById('diag-authority').textContent = data.authority;
+      document.getElementById('diag-time').textContent = data.time;
+    }
+
+    document.getElementById('estimator-type').addEventListener('change', updateEstimator);
+    document.getElementById('estimator-region').addEventListener('change', updateEstimator);
+
+    function sendEstimatorToWhatsApp() {
+      const type = document.getElementById('estimator-type').value;
+      const region = document.getElementById('estimator-region').value;
+      const notes = document.getElementById('estimator-notes').value || 'Sin notas adicionales';
+      const data = estimatorData[type];
+
+      const text = `Hola WRE Consultoría SAS,%0A%0AHe realizado un diagnóstico en su cotizador web:%0A- *Estudio Requerido:* ${data.title}%0A- *Jurisdicción:* ${region}%0A- *Complejidad:* ${selectedComplexity}%0A- *Plazo Estimado:* ${data.time}%0A- *Detalles Adicionales:* ${notes}%0A%0A¿Podrían brindarme una cotización formal y asesoría técnica?`;
+      window.open(`https://wa.me/573164387493?text=${text}`, '_blank');
+    }
+
+    function transferEstimatorToForm() {
+      const type = document.getElementById('estimator-type').value;
+      const region = document.getElementById('estimator-region').value;
+      const notes = document.getElementById('estimator-notes').value;
+      const data = estimatorData[type];
+
+      prefillQuote(data.title, `Diagnóstico para ${data.title} en ${region}. Escala: ${selectedComplexity}. Plazo preliminar: ${data.time}. ${notes ? 'Detalles: ' + notes : ''}`);
+    }
+
+    // Service Modals
+    const serviceDetails = {
+      hidrologia: {
+        badge: 'Hidrología Superficial',
+        title: 'Estudios de Hidrología',
+        tagline: 'Ciclo del agua, regímenes de caudales y prevención de inundaciones',
+        desc: 'Nuestros estudios hidrológicos determinan con rigor matemático las variables del ciclo hídrico en cuencas hidrográficas. Mediante análisis estadísticos de series hidroclimatológicas del IDEAM y modelos de transformación lluvia-escorrentía, estimamos caudales de diseño para diferentes periodos de retorno, balances hídricos y curvas IDF indispensables en el diseño de obras de infraestructura y gestión del riesgo.',
+        deliverables: ['Curvas Intensidad-Duración-Frecuencia (IDF)', 'Análisis de frecuencias y periodos de retorno (Gumbel, Pearson III)', 'Modelación lluvia-escorrentía de cuencas con HEC-HMS', 'Balances hídricos mensuales y multianuales'],
+        software: ['HEC-HMS', 'QGIS', 'HydroGNOMON', 'Python Hidrológico'],
+        regulations: ['Guías Técnicas IDEAM', 'Decreto 1076 de 2015', 'Normas RAS']
+      },
+      hidraulica: {
+        badge: 'Hidrodinámica & Obras',
+        title: 'Estudios de Hidráulica',
+        tagline: 'Modelación 1D/2D con Iber y diseño de sistemas de conducción',
+        desc: 'Realizamos simulaciones hidrodinámicas unidimensionales y bidimensionales de alta resolución para determinar niveles de agua, velocidades y patrones de flujo en ríos, quebradas y llanuras de inundación. Diseñamos sistemas de conducción, box-culverts, presas, vertederos de excesos y disipadores de energía conforme a términos de referencia de corporaciones autónomas.',
+        deliverables: ['Modelación hidráulica bidimensional (Iber 2D)', 'Modelación hidráulica unidimensional (HEC-RAS 1D)', 'Mapas de amenaza y zonificación por inundación', 'Delimitación técnica de rondas hídricas'],
+        software: ['Iber 2D', 'HEC-RAS', 'EPA-SWMM', 'Civil 3D'],
+        regulations: ['Guía Metodológica Rondas MinAmbiente', 'Criterios INVÍAS']
+      },
+      subterraneas: {
+        badge: 'Hidrogeología',
+        title: 'Estudios de Aguas Subterráneas',
+        tagline: 'Ensayos de bombeo, acuíferos y concesiones subterráneas',
+        desc: 'Especializados en la caracterización hidrogeológica de formaciones acuíferas, diseño e interpretación de pruebas de bombeo a caudal constante y escalonado, cálculo de transmisividad, almacenamiento y radio de influencia de pozos. Desarrollamos modelos de flujo subterráneo para garantizar extracciones sustentables.',
+        deliverables: ['Diseño y supervisión de pruebas de bombeo', 'Cálculo de parámetros hidráulicos (T, S, K)', 'Modelación numérica de flujo y transporte', 'Mapas de vulnerabilidad de acuíferos (GOD, DRASTIC)'],
+        software: ['MODFLOW', 'AQTESOLV', 'RockWorks'],
+        regulations: ['Decreto 1076 de 2015', 'Términos de Referencia CAR / ANLA']
+      },
+      calidad: {
+        badge: 'Calidad & Vertimientos',
+        title: 'Estudios de Calidad del Agua',
+        tagline: 'Modelación QUAL2K, capacidad de asimilación y permisos Res. 0631',
+        desc: 'Brindamos soporte técnico para la toma de muestras compuestas y puntuales, análisis estadístico de parámetros físico-químicos (DBO, DQO, SST, nutrientes, metales) y modelación de la calidad del agua en corrientes receptoras. Determinamos la capacidad de asimilación y dilución de ríos para trámites de permisos de vertimiento.',
+        deliverables: ['Planes de monitoreo y caracterización de agua superficial', 'Modelación de calidad de agua superficial (QUAL2K)', 'Estudios de capacidad de asimilación y carga contaminante', 'Expedientes para Permiso de Vertimientos'],
+        software: ['QUAL2K', 'EPA WASP', 'R Estadístico'],
+        regulations: ['Resolución 0631 de 2015', 'Resolución 1207 de 2014']
+      },
+      riego: {
+        badge: 'Agroingeniería',
+        title: 'Estudios de Riego y Drenaje Agrícola',
+        tagline: 'Optimización hídrica, diseño de canales y control de salinización',
+        desc: 'Maximizamos la eficiencia en el uso del agua en proyectos agroindustriales y distritos de riego. Calculamos las necesidades netas y brutas de riego según coeficientes de cultivo (Kc) y evapotranspiración (ETo), diseñamos canales principales, laterales y redes de drenaje para abatir niveles freáticos y prevenir la salinización.',
+        deliverables: ['Determinación de demandas hídricas de cultivos (FAO-56)', 'Diseño hidráulico de canales y tuberías de riego', 'Planificación y dimensionamiento de drenaje agrícola', 'Planes de uso eficiente y ahorro del agua (PUEAA)'],
+        software: ['CROPWAT', 'EPANET', 'AutoCAD Civil 3D'],
+        regulations: ['Metodologías FAO', 'Lineamientos ADR / MinAgricultura']
+      },
+      ambiental: {
+        badge: 'Gestión Ambiental',
+        title: 'Estudios Ambientales e Instrumentos',
+        tagline: 'EIA, PMA, POMCA, PUEAA, PSMV y licenciamiento ante ANLA y CARs',
+        desc: 'Acompañamos a empresas y entidades públicas en la estructuración de todos los instrumentos de regulación ambiental exigidos en Colombia. Desde Estudios de Impacto Ambiental (EIA) y Planes de Manejo Ambiental (PMA), hasta Planes de Ordenación de Cuencas (POMCA), PUEAA, planes de saneamiento y análisis de riesgo hídrico.',
+        deliverables: ['Estudios de Impacto Ambiental (EIA) y PMA', 'Diagnósticos Ambientales de Alternativas (DAA)', 'Programas para el Uso Eficiente del Agua (PUEAA)', 'Planes de Ordenación de Cuencas Hidrográficas (POMCA)'],
+        software: ['ArcGIS Pro', 'QGIS', 'GeoDataBase ANLA'],
+        regulations: ['Ley 99 de 1993', 'Decreto Único Reglamentario 1076 de 2015']
+      }
+    };
+
+    function openServiceModal(key) {
+      const s = serviceDetails[key];
+      const modal = document.getElementById('service-modal');
+      const content = document.getElementById('modal-service-content');
+
+      content.innerHTML = `
+        <div class="flex items-center gap-2 text-xs font-semibold uppercase tracking-wider text-sky-400 mb-2">
+          <span>${s.badge}</span>
+          <span aria-hidden="true" class="text-slate-600">·</span>
+          <span>WRE Consultoría SAS</span>
+        </div>
+        <h3 class="text-2xl font-bold text-white mb-1">${s.title}</h3>
+        <p class="text-sm font-medium text-sky-300 mb-6">${s.tagline}</p>
+        <div class="mb-6 pb-6 border-b border-slate-800">
+          <h4 class="text-xs font-semibold uppercase tracking-wider text-slate-400 mb-2">Descripción Técnica</h4>
+          <p class="text-sm text-slate-300 leading-relaxed">${s.desc}</p>
+        </div>
+        <div class="mb-6 pb-6 border-b border-slate-800">
+          <h4 class="text-xs font-semibold uppercase tracking-wider text-slate-400 mb-3">Productos & Entregables Técnicos</h4>
+          <ul class="space-y-2">
+            ${s.deliverables.map(d => `<li class="flex items-start gap-2 text-xs sm:text-sm text-slate-300"><span class="text-sky-400">✓</span><span>${d}</span></li>`).join('')}
+          </ul>
+        </div>
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-6">
+          <div class="p-4 rounded-xl bg-slate-950/60 border border-slate-800">
+            <span class="text-xs font-semibold text-slate-300 block mb-2">Software Aplicado</span>
+            <div class="flex flex-wrap gap-1.5">${s.software.map(sw => `<span class="px-2 py-0.5 text-[11px] font-mono rounded bg-slate-800 text-sky-300">${sw}</span>`).join('')}</div>
+          </div>
+          <div class="p-4 rounded-xl bg-slate-950/60 border border-slate-800">
+            <span class="text-xs font-semibold text-slate-300 block mb-2">Normativa de Referencia</span>
+            <div class="flex flex-wrap gap-1.5">${s.regulations.map(rg => `<span class="px-2 py-0.5 text-[11px] font-mono rounded bg-slate-800 text-emerald-300">${rg}</span>`).join('')}</div>
+          </div>
+        </div>
+        <div class="flex justify-end pt-4 border-t border-slate-800">
+          <button onclick="closeServiceModal(); prefillQuote('${s.title}')" class="px-5 py-2.5 text-xs font-semibold text-white bg-sky-600 hover:bg-sky-500 rounded-lg">Cotizar este Estudio →</button>
+        </div>
+      `;
+
+      modal.classList.remove('hidden');
+      modal.classList.add('flex');
+    }
+
+    function closeServiceModal() {
+      const modal = document.getElementById('service-modal');
+      modal.classList.add('hidden');
+      modal.classList.remove('flex');
+    }
+
+    // Resource Modals
+    const resourceDetails = {
+      villon: {
+        title: 'Hidrología Estocástica',
+        author: 'Máximo Villón Béjar',
+        inst: 'Instituto Tecnológico de Costa Rica',
+        app: 'Permite a WRE calcular con precisión los periodos de retorno para obras de infraestructura (puentes, presas, canales de riego), minimizando el riesgo de subdimensionamiento o sobrecostos innecesarios.',
+        details: 'Fundamento matemático para el análisis de series hidrológicas multianuales, funciones de distribución de probabilidad extremal (Gumbel, Pearson III, Log-Normal) y generación sintética de caudales mensuales.'
+      },
+      iber: {
+        title: 'Iber Applications Basic Guide',
+        author: 'Universidade da Coruña & CEDEX',
+        inst: 'Centro de Estudios Hidrográficos de España',
+        app: 'Mapas de Inundabilidad de Alta Precisión: A diferencia de la modelación 1D, Iber permite ver hacia dónde se desplaza el agua en terrenos llanos. Vital para delimitar zonas de ronda hídrica.',
+        details: 'Modelo hidrodinámico bidimensional basado en las ecuaciones de Saint-Venant 2D mediante volúmenes finitos. Simulación de rotura de presas, arrastre de sedimentos y confluencias fluviales.'
+      },
+      ramalho: {
+        title: 'Tratamiento de Aguas Residuales',
+        author: 'R.S. Ramalho',
+        inst: 'Université Laval, Quebec',
+        app: 'Realizar diagnósticos de vertimientos, diseñar sistemas de tratamiento para comunidades rurales o proyectos agrícolas, y garantizar que los proyectos cumplan con la normativa de calidad de agua.',
+        details: 'Diseño riguroso de reactores biológicos de lodos activados, lagunas de estabilización, filtros anaeróbicos de flujo ascendente (FAFA) y sistemas de desinfección conforme a la Res. 0631 de 2015.'
+      },
+      chapra: {
+        title: 'Surface Water Quality Modeling',
+        author: 'Steven C. Chapra',
+        inst: 'Tufts University',
+        app: 'Permisos de Vertimientos, Gestión de Aguas Subterráneas y Superficiales, Implementación de Software (QUAL2K) y Sostenibilidad Ambiental.',
+        details: 'Modelación matemática del balance de oxígeno disuelto (curva de déficit de Streeter-Phelps), ciclos biogeoquímicos de nutrientes y cálculo de la capacidad de asimilación de ríos.'
+      },
+      urban: {
+        title: 'Urban Drainage',
+        author: 'David Butler & John W. Davies',
+        inst: 'Imperial College London',
+        app: 'Diseño y modelación de sistemas de drenaje pluvial y sanitario, Sistemas Urbanos de Drenaje Sostenible (SUDS), y prevención de anegamientos en cascos urbanos.',
+        details: 'Tratamiento moderno de escorrentía en áreas impermeabilizadas. Dimensionamiento de cunetas, tanques de tormenta y modelación numérica con EPA-SWMM.'
+      },
+      debris: {
+        title: 'Debris-flow Hazards and Related Phenomena',
+        author: 'O. Hungr, M. Jakob, D.M. Cruden',
+        inst: 'Springer Praxis Books in Geophysical Sciences',
+        app: 'Evaluación y modelación de avenidas torrenciales y remoción en masa en cuencas de montaña andinas para planes de gestión de riesgo y estudios de impacto ambiental.',
+        details: 'Metodologías para la predicción de volúmenes de detritos, cálculo de velocidad de arrastre y delimitación de distancias de alcance (run-out) en quebradas de alta pendiente.'
+      }
+    };
+
+    function openResourceModal(key) {
+      const r = resourceDetails[key];
+      const modal = document.getElementById('resource-modal');
+      const content = document.getElementById('modal-resource-content');
+
+      content.innerHTML = `
+        <div class="flex items-center gap-2 text-xs font-semibold uppercase tracking-wider text-sky-400 mb-2">
+          <span>Fundamento Metodológico</span>
+          <span aria-hidden="true" class="text-slate-600">·</span>
+          <span>WRE Consultoría SAS</span>
+        </div>
+        <h3 class="text-xl font-bold text-white mb-1">${r.title}</h3>
+        <p class="text-xs text-slate-300 mb-2">Autor: <span class="text-white font-medium">${r.author}</span> (${r.inst})</p>
+        <div class="p-4 rounded-xl bg-sky-950/40 border border-sky-800/40 my-4">
+          <span class="text-xs font-semibold uppercase tracking-wider text-sky-300 block mb-1">Aplicación en Proyectos WRE</span>
+          <p class="text-xs text-slate-200 leading-relaxed">${r.app}</p>
+        </div>
+        <div class="mb-6 pb-4 border-b border-slate-800">
+          <span class="text-xs font-semibold uppercase tracking-wider text-slate-400 block mb-1">Detalles Técnicos</span>
+          <p class="text-xs text-slate-300 leading-relaxed">${r.details}</p>
+        </div>
+        <div class="flex justify-end pt-2">
+          <button onclick="closeResourceModal(); prefillQuote('Consulta sobre estándar: ${r.title}')" class="px-4 py-2 text-xs font-semibold text-white bg-sky-600 hover:bg-sky-500 rounded-lg">Consultar sobre esta Metodología →</button>
+        </div>
+      `;
+
+      modal.classList.remove('hidden');
+      modal.classList.add('flex');
+    }
+
+    function closeResourceModal() {
+      const modal = document.getElementById('resource-modal');
+      modal.classList.add('hidden');
+      modal.classList.remove('flex');
+    }
+
+    // Prefill Quote Helper
+    function prefillQuote(serviceName, customMsg) {
+      const select = document.getElementById('form-service');
+      const textarea = document.getElementById('form-message');
+
+      if (select) {
+        let matched = false;
+        for (let i = 0; i < select.options.length; i++) {
+          if (select.options[i].value.toLowerCase().includes(serviceName.toLowerCase()) || serviceName.toLowerCase().includes(select.options[i].value.toLowerCase())) {
+            select.selectedIndex = i;
+            matched = true;
+            break;
+          }
+        }
+        if (!matched) {
+          select.value = 'Otro Requerimiento';
+        }
+      }
+
+      if (textarea && customMsg) {
+        textarea.value = customMsg;
+      } else if (textarea && !textarea.value) {
+        textarea.value = `Requiero información técnica y cotización formal para: ${serviceName}.`;
+      }
+
+      document.getElementById('contacto').scrollIntoView({ behavior: 'smooth' });
+    }
+
+    // Contact Form Logic
+    function handleContactSubmit(e) {
+      e.preventDefault();
+      const name = document.getElementById('form-name').value.trim();
+      const phone = document.getElementById('form-phone').value.trim();
+      const email = document.getElementById('form-email').value.trim();
+      const alertBox = document.getElementById('contact-alert');
+      const alertMsg = document.getElementById('contact-alert-msg');
+
+      if (!name) {
+        alertBox.classList.remove('hidden');
+        alertMsg.textContent = 'Por favor ingrese su nombre o razón social.';
+        return;
+      }
+      if (!phone || phone.length < 7) {
+        alertBox.classList.remove('hidden');
+        alertMsg.textContent = 'Por favor ingrese un número telefónico válido.';
+        return;
+      }
+      if (!email || !email.includes('@')) {
+        alertBox.classList.remove('hidden');
+        alertMsg.textContent = 'Por favor ingrese un correo electrónico válido.';
+        return;
+      }
+
+      alertBox.classList.add('hidden');
+      document.getElementById('contact-form').classList.add('hidden');
+      document.getElementById('contact-success').classList.remove('hidden');
+    }
+
+    function resetContactForm() {
+      document.getElementById('contact-form').reset();
+      document.getElementById('contact-form').classList.remove('hidden');
+      document.getElementById('contact-success').classList.add('hidden');
+    }
+
+    function sendFormToWhatsApp() {
+      const name = document.getElementById('form-name').value || 'Cliente';
+      const phone = document.getElementById('form-phone').value || 'No especificado';
+      const email = document.getElementById('form-email').value || 'No especificado';
+      const service = document.getElementById('form-service').value || 'General';
+      const message = document.getElementById('form-message').value || 'Solicito cotización para estudios hídricos/ambientales.';
+
+      const text = `Hola WRE Consultoría SAS,%0A%0A*Solicitud de Cotización Técnica:*%0A- *Nombre:* ${name}%0A- *Teléfono:* ${phone}%0A- *Correo:* ${email}%0A- *Estudio Requerido:* ${service}%0A- *Detalles:* ${message}`;
+      window.open(`https://wa.me/573164387493?text=${text}`, '_blank');
+    }
+
+    // Close modals on background click or Escape
+    window.addEventListener('click', (e) => {
+      if (e.target.id === 'service-modal') closeServiceModal();
+      if (e.target.id === 'resource-modal') closeResourceModal();
+    });
+    window.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape') {
+        closeServiceModal();
+        closeResourceModal();
+      }
+    });
+  </script>
+</body>
+</html>

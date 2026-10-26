@@ -1,0 +1,6 @@
+{
+  "name": "WRE Consultoría SAS - Recursos Hídricos y Estudios Ambientales",
+  "description": "Firma líder en consultoría de recursos hídricos, hidrología, modelación hidráulica 2D, aguas subterráneas y estudios ambientales integrales en Colombia.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
